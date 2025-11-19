@@ -44,12 +44,12 @@
     "explanation": "javascript is used for making webpages interactive"
   },
   {
-    "question": "What is a variable in javascript?",
+    "question": "What does the acronym CSS stand for?",
     "options": [
       "a number",
       "a picture in your code",
       "a container or box for storing data",
-      "coding sheet style"
+      "cascading style sheet"
     ],
     "answer": "cascading style sheet",
     "explanation": "cascading style sheet."

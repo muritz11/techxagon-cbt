@@ -83,6 +83,7 @@ function Login() {
               <button
                 type="button"
                 className="w-full border border-gray-400 text-gray-700 py-2 rounded-lg font-medium hover:bg-gray-50 transition"
+                onClick={() => navigate("/admin")}
               >
                 Admin Login
               </button>

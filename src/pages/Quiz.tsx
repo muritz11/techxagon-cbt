@@ -1,28 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Clock, CheckCircle, XCircle, RotateCcw } from "lucide-react";
+import { Clock, CheckCircle, XCircle } from "lucide-react";
 import Questions from "../assets/data/questions.json";
 import StudentClasses from "../assets/data/classes.json";
 import { useNavigate } from "react-router-dom";
-
-interface Question {
-  question: string;
-  options: string[];
-  answer: string;
-  explanation: string;
-}
-
-interface SummaryInterface {
-  student: {
-    name: string;
-    class: string;
-  };
-  date: string;
-  score: string;
-  selectedQuestions: Question[];
-  selectedAnswers: {
-    [key: number]: string;
-  };
-}
+import type { QuestionInterface, QuizResultInterface } from "../utils/types";
 
 const QUESTION_LENGTH = 10;
 // quiz duration in seconds
@@ -30,7 +11,9 @@ const QUIZ_DURATION = 300;
 
 const Quiz = () => {
   const navigate = useNavigate();
-  const [selectedQuestions, setSelectedQuestions] = useState<Question[]>([]);
+  const [selectedQuestions, setSelectedQuestions] = useState<
+    QuestionInterface[]
+  >([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState<{
     [key: number]: string;
@@ -147,7 +130,7 @@ const Quiz = () => {
   if (isQuizComplete) {
     const score = calculateScore();
     const percentage = (score / selectedQuestions.length) * 100;
-    const summaries: SummaryInterface[] =
+    const summaries: QuizResultInterface[] =
       JSON.parse(localStorage.getItem("results") || "null") || [];
     // const summary: SummaryInterface =
     summaries.push({
@@ -194,8 +177,7 @@ const Quiz = () => {
               onClick={resetQuiz}
               className="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2"
             >
-              <RotateCcw size={20} />
-              Take Another Quiz
+              Finish
             </button>
           </div>
 

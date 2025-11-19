@@ -42,7 +42,7 @@ const Routes = () => {
         { path: "", element: <Home /> },
         { path: "/login", element: <Login /> },
         { path: "/start-quiz", element: <Quiz /> },
-        // { path: "/signup", element: <Signup /> },
+        { path: "/admin", element: <Admin /> },
       ],
       errorElement: <ErrorPage />,
     },
@@ -64,5 +64,6 @@ const Routes = () => {
 // auth
 const Login = Loadable(lazy(() => import("../pages/Login")));
 const Quiz = Loadable(lazy(() => import("../pages/Quiz")));
+const Admin = Loadable(lazy(() => import("../pages/Admin")));
 
 export default Routes;
