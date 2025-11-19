@@ -1,0 +1,28 @@
+[
+  { "label": "JSS 1A", "value": "jss1a", "paperID": 1 },
+  { "label": "JSS 1B", "value": "jss1b", "paperID": 2 },
+  { "label": "JSS 2A", "value": "jss2a", "paperID": 3 },
+  { "label": "JSS 2B", "value": "jss2b", "paperID": 4 },
+  { "label": "JSS 2C", "value": "jss2c", "paperID": 5 },
+  { "label": "JSS 3A", "value": "jss3a", "paperID": 6 },
+  { "label": "JSS 3B", "value": "jss3b", "paperID": 7 },
+  { "label": "JSS 3C", "value": "jss3c", "paperID": 8 },
+
+  { "label": "SSS 1A", "value": "sss1a", "paperID": 9 },
+  { "label": "SSS 1B", "value": "sss1b", "paperID": 10 },
+  { "label": "SSS 1C", "value": "sss1c", "paperID": 11 },
+  { "label": "SSS 1D", "value": "sss1d", "paperID": 12 },
+  { "label": "SSS 1E", "value": "sss1e", "paperID": 13 },
+
+  { "label": "SSS 2A", "value": "sss2a", "paperID": 14 },
+  { "label": "SSS 2B", "value": "sss2b", "paperID": 15 },
+  { "label": "SSS 2C", "value": "sss2c", "paperID": 16 },
+  { "label": "SSS 2D", "value": "sss2d", "paperID": 17 },
+  { "label": "SSS 2E", "value": "sss2e", "paperID": 18 },
+
+  { "label": "SSS 3A", "value": "sss3a", "paperID": 19 },
+  { "label": "SSS 3B", "value": "sss3b", "paperID": 20 },
+  { "label": "SSS 3C", "value": "sss3c", "paperID": 21 },
+  { "label": "SSS 3D", "value": "sss3d", "paperID": 22 },
+  { "label": "SSS 3E", "value": "sss3e", "paperID": 23 }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "question": "Which of these is a boolean value",
+    "options": [
+      "yes",
+      "no .",
+      "true",
+      "int"
+    ],
+    "answer": "true",
+    "explanation": "boolean values are true or false"
+  },
+  {
+    "question": " what will 5 % 2 return ",
+    "options": [
+      "3",
+      "2.5",
+      "2",
+      "1"
+    ],
+    "answer": "1",
+    "explanation": "modulus denoted by % stands for division remainder"
+  },
+  {
+    "question": "what is the keyword used for a variable that should never change",
+    "options": [
+      "const",
+      "let",
+      "var",
+      "fixed"
+    ],
+    "answer": "const",
+    "explanation": "const variable for variables that remain constant through out the operation"
+  },
+  {
+    "question": "what is the javascript main function in a webpage",
+    "options": [
+      "making a webpage interactive",
+      "creating the layout for a webpage",
+      "styling webpages",
+      "all of the above"
+    ],
+    "answer": "making a webpage interactive",
+    "explanation": "javascript is used for making webpages interactive"
+  },
+  {
+    "question": "What is a variable in javascript?",
+    "options": [
+      "a number",
+      "a picture in your code",
+      "a container or box for storing data",
+      "coding sheet style"
+    ],
+    "answer": "cascading style sheet",
+    "explanation": "cascading style sheet."
+  },
+  {
+    "question": "which of the following is the correct way of declaring a variable",
+    "options": [
+      "const age = 13",
+      "var = age 13",
+      "let = age 13",
+      "variable age = 13"
+    ],
+    "answer": "const age = 13",
+    "explanation": "the keyword comes first, followed by variable name, equals sign and the value"
+  },
+  {
+    "question": "what data type is used for text",
+    "options": [
+      "number",
+      "string",
+      "boolean",
+      "integer"
+    ],
+    "answer": "string",
+    "explanation": "strings are for texts"
+  },
+  {
+    "question": "The joining of strings together is known as _____________________",
+    "options": [
+      "string sum",
+      "joining",
+      "concatenation",
+      "addition"
+    ],
+    "answer": "concatenation",
+    "explanation": "concatenation is the addition of strings"
+  },
+  {
+    "question": "which operator is used for multiplication",
+    "options": [
+      "x",
+      "%",
+      "*",
+      "/"
+    ],
+    "answer": "*",
+    "explanation": "the asterisk symbol is used for multiplication"
+  },
+  {
+    "question": "What command is used to display messages in javascript",
+    "options": [
+      "alert()",
+      "console.log()",
+      "show()",
+      "run()"
+    ],
+    "answer": "console.log()",
+    "explanation": "console.log is used to print in javascript"
+  }
+]

@@ -41,6 +41,7 @@ const Routes = () => {
       children: [
         { path: "", element: <Home /> },
         { path: "/login", element: <Login /> },
+        { path: "/start-quiz", element: <Quiz /> },
         // { path: "/signup", element: <Signup /> },
       ],
       errorElement: <ErrorPage />,
@@ -62,5 +63,6 @@ const Routes = () => {
 
 // auth
 const Login = Loadable(lazy(() => import("../pages/Login")));
+const Quiz = Loadable(lazy(() => import("../pages/Quiz")));
 
 export default Routes;
