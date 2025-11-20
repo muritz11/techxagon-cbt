@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Clock, CheckCircle, XCircle } from "lucide-react";
 import Questions from "../assets/data/questions.json";
 import StudentClasses from "../assets/data/classes.json";

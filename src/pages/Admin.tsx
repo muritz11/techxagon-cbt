@@ -13,7 +13,7 @@ import {
 import type { QuizResultInterface } from "../utils/types";
 import StudentClasses from "../assets/data/classes.json";
 
-const Quiz_WEIGHT = 0.6;
+// const Quiz_WEIGHT = 0.6;
 
 const Admin = () => {
   const [showClearPrompt, setShowClearPrompt] = useState(false);

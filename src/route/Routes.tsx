@@ -1,32 +1,34 @@
-import { lazy, Suspense } from "react";
+// import { Suspense } from "react";
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import Home from "../pages/Home";
+import Login from "../pages/Login";
+import Quiz from "../pages/Quiz";
+import Admin from "../pages/Admin";
 import ErrorPage from "../pages/ErrorPage";
 // import RoutesAuth from "./RoutesAuth";
 // import Layout from "../components/dashboard/Layout";
 
-
-export const Loadable = (Component: any) => (props: any) => {
-  return (
-    <Suspense
-      fallback={
-        <div
-          style={{
-            width: "100%",
-            height: "100vh",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <p className="italic">loading...</p>
-        </div>
-      }
-    >
-      <Component {...props} />
-    </Suspense>
-  );
-};
+// export const Loadable = (Component: any) => (props: any) => {
+//   return (
+//     <Suspense
+//       fallback={
+//         <div
+//           style={{
+//             width: "100%",
+//             height: "100vh",
+//             display: "flex",
+//             alignItems: "center",
+//             justifyContent: "center",
+//           }}
+//         >
+//           <p className="italic">loading...</p>
+//         </div>
+//       }
+//     >
+//       <Component {...props} />
+//     </Suspense>
+//   );
+// };
 
 const Routes = () => {
   let router = createBrowserRouter([
@@ -60,10 +62,5 @@ const Routes = () => {
 
   return router;
 };
-
-// auth
-const Login = Loadable(lazy(() => import("../pages/Login")));
-const Quiz = Loadable(lazy(() => import("../pages/Quiz")));
-const Admin = Loadable(lazy(() => import("../pages/Admin")));
 
 export default Routes;
