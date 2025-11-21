@@ -1,38 +1,27 @@
 [
   {
+    "paperId": 1,
     "question": "Which of these is a boolean value",
-    "options": [
-      "yes",
-      "no .",
-      "true",
-      "int"
-    ],
+    "options": ["yes", "no .", "true", "int"],
     "answer": "true",
     "explanation": "boolean values are true or false"
   },
   {
+    "paperId": 1,
     "question": " what will 5 % 2 return ",
-    "options": [
-      "3",
-      "2.5",
-      "2",
-      "1"
-    ],
+    "options": ["3", "2.5", "2", "1"],
     "answer": "1",
     "explanation": "modulus denoted by % stands for division remainder"
   },
   {
+    "paperId": 1,
     "question": "what is the keyword used for a variable that should never change",
-    "options": [
-      "const",
-      "let",
-      "var",
-      "fixed"
-    ],
+    "options": ["const", "let", "var", "fixed"],
     "answer": "const",
     "explanation": "const variable for variables that remain constant through out the operation"
   },
   {
+    "paperId": 1,
     "question": "what is the javascript main function in a webpage",
     "options": [
       "making a webpage interactive",
@@ -44,6 +33,7 @@
     "explanation": "javascript is used for making webpages interactive"
   },
   {
+    "paperId": 1,
     "question": "What does the acronym CSS stand for?",
     "options": [
       "a number",
@@ -55,6 +45,7 @@
     "explanation": "cascading style sheet."
   },
   {
+    "paperId": 1,
     "question": "which of the following is the correct way of declaring a variable",
     "options": [
       "const age = 13",
@@ -66,46 +57,145 @@
     "explanation": "the keyword comes first, followed by variable name, equals sign and the value"
   },
   {
+    "paperId": 1,
     "question": "what data type is used for text",
-    "options": [
-      "number",
-      "string",
-      "boolean",
-      "integer"
-    ],
+    "options": ["number", "string", "boolean", "integer"],
     "answer": "string",
     "explanation": "strings are for texts"
   },
   {
+    "paperId": 1,
     "question": "The joining of strings together is known as _____________________",
-    "options": [
-      "string sum",
-      "joining",
-      "concatenation",
-      "addition"
-    ],
+    "options": ["string sum", "joining", "concatenation", "addition"],
     "answer": "concatenation",
     "explanation": "concatenation is the addition of strings"
   },
   {
+    "paperId": 1,
     "question": "which operator is used for multiplication",
-    "options": [
-      "x",
-      "%",
-      "*",
-      "/"
-    ],
+    "options": ["x", "%", "*", "/"],
     "answer": "*",
     "explanation": "the asterisk symbol is used for multiplication"
   },
   {
+    "paperId": 1,
     "question": "What command is used to display messages in javascript",
+    "options": ["alert()", "console.log()", "show()", "run()"],
+    "answer": "console.log()",
+    "explanation": "console.log is used to print in javascript"
+  },
+  {
+    "paperId": 1,
+    "question": "which operator is used for multiplication",
+    "options": ["x", "%", "*", "/"],
+    "answer": "*",
+    "explanation": "the asterisk symbol is used for multiplication"
+  },
+  {
+    "paperId": 1,
+    "question": "What command is used to display messages in javascript",
+    "options": ["alert()", "console.log()", "show()", "run()"],
+    "answer": "console.log()",
+    "explanation": "console.log is used to print in javascript"
+  },
+
+  {
+    "paperId": 2,
+    "question": "Which of these is a boolean value",
+    "options": ["yes", "no .", "true", "int"],
+    "answer": "true",
+    "explanation": "boolean values are true or false"
+  },
+  {
+    "paperId": 2,
+    "question": " what will 5 % 2 return ",
+    "options": ["3", "2.5", "2", "1"],
+    "answer": "1",
+    "explanation": "modulus denoted by % stands for division remainder"
+  },
+  {
+    "paperId": 2,
+    "question": "what is the keyword used for a variable that should never change",
+    "options": ["const", "let", "var", "fixed"],
+    "answer": "const",
+    "explanation": "const variable for variables that remain constant through out the operation"
+  },
+
+  {
+    "paperId": 2,
+    "question": "what is the javascript main function in a webpage",
     "options": [
-      "alert()",
-      "console.log()",
-      "show()",
-      "run()"
+      "making a webpage interactive",
+      "creating the layout for a webpage",
+      "styling webpages",
+      "all of the above"
     ],
+    "answer": "making a webpage interactive",
+    "explanation": "javascript is used for making webpages interactive"
+  },
+  {
+    "paperId": 2,
+    "question": "What does the acronym CSS stand for?",
+    "options": [
+      "a number",
+      "a picture in your code",
+      "a container or box for storing data",
+      "cascading style sheet"
+    ],
+    "answer": "cascading style sheet",
+    "explanation": "cascading style sheet."
+  },
+  {
+    "paperId": 2,
+    "question": "which of the following is the correct way of declaring a variable",
+    "options": [
+      "const age = 13",
+      "var = age 13",
+      "let = age 13",
+      "variable age = 13"
+    ],
+    "answer": "const age = 13",
+    "explanation": "the keyword comes first, followed by variable name, equals sign and the value"
+  },
+  {
+    "paperId": 2,
+    "question": "what data type is used for text",
+    "options": ["number", "string", "boolean", "integer"],
+    "answer": "string",
+    "explanation": "strings are for texts"
+  },
+  {
+    "paperId": 2,
+    "question": "The joining of strings together is known as _____________________",
+    "options": ["string sum", "joining", "concatenation", "addition"],
+    "answer": "concatenation",
+    "explanation": "concatenation is the addition of strings"
+  },
+  {
+    "paperId": 2,
+    "question": "which operator is used for multiplication",
+    "options": ["x", "%", "*", "/"],
+    "answer": "*",
+    "explanation": "the asterisk symbol is used for multiplication"
+  },
+  {
+    "paperId": 2,
+    "question": "What command is used to display messages in javascript",
+    "options": ["alert()", "console.log()", "show()", "run()"],
+    "answer": "console.log()",
+    "explanation": "console.log is used to print in javascript"
+  },
+  {
+    "paperId": 2,
+    "question": "which operator is used for multiplication",
+    "options": ["x", "%", "*", "/"],
+    "answer": "*",
+    "explanation": "the asterisk symbol is used for multiplication"
+  },
+  {
+    "paperId": 2,
+    "question": "What command is used to display messages in javascript",
+    "options": ["alert()", "console.log()", "show()", "run()"],
     "answer": "console.log()",
     "explanation": "console.log is used to print in javascript"
   }

@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import SearchableSelect from "../utils/SearchableSelect";
 import Classes from "../assets/data/classes.json";
+import Papers from "../assets/data/paper-types.json";
 import { useState } from "react";
 import { checkEmptyFields } from "../utils/helpers";
+import type { AuthStudentInterface } from "../utils/types";
 
 function Login() {
   const [showError, setShowError] = useState(false);
@@ -27,7 +29,14 @@ function Login() {
       return;
     }
 
-    localStorage.setItem("student", JSON.stringify(formState));
+    const studentClass = Classes.find((val) => val.value === formState.class);
+    const paper = Papers.find((val) => val.id === studentClass?.paperID);
+    const student: AuthStudentInterface = {
+      ...formState,
+      paperId: paper?.id,
+      paperTitle: paper?.label,
+    };
+    localStorage.setItem("student", JSON.stringify(student));
     navigate("/start-quiz");
   };
 

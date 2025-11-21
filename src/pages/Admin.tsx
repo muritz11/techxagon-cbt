@@ -85,8 +85,8 @@ const Admin = () => {
       const [correct, total] = result.score.split("/").map(Number);
       const percentage = ((correct / total) * 100).toFixed(1);
       return [
-        result.student.name,
-        result.student.class,
+        result.student?.name,
+        result.student?.class,
         result.date,
         result.score,
         total,
@@ -116,7 +116,7 @@ const Admin = () => {
     const url = URL.createObjectURL(dataBlob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = `${result.student.name}-${result.date}.json`;
+    link.download = `${result.student?.name}-${result.date}.json`;
     link.click();
     URL.revokeObjectURL(url);
   };
@@ -199,7 +199,7 @@ const Admin = () => {
 
             <div className="border-b pb-6 mb-6">
               <h1 className="text-3xl font-bold text-gray-800 mb-4">
-                {selectedResult.student.name}'s Quiz Result
+                {selectedResult.student?.name}'s Quiz Result
               </h1>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="flex items-center gap-2 text-gray-600">
@@ -207,7 +207,7 @@ const Admin = () => {
                   <span>
                     Class:{" "}
                     {StudentClasses?.find(
-                      (val) => val.value === selectedResult.student.class
+                      (val) => val.value === selectedResult.student?.class
                     )?.label || "N/A"}
                   </span>
                 </div>
@@ -430,11 +430,11 @@ const Admin = () => {
                           className="py-4 px-4 font-medium text-gray-800 capitalize"
                           onClick={() => setSelectedResult(result)}
                         >
-                          {result.student.name}
+                          {result.student?.name}
                         </td>
                         <td className="py-4 px-4 text-gray-600">
                           {StudentClasses?.find(
-                            (val) => val.value === result.student.class
+                            (val) => val.value === result.student?.class
                           )?.label || "N/A"}
                           {/* {result.student.class} */}
                         </td>

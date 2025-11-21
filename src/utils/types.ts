@@ -6,14 +6,18 @@ export interface QuestionInterface {
 }
 
 export interface QuizResultInterface {
-  student: {
-    name: string;
-    class: string;
-  };
+  student: AuthStudentInterface | null;
   date: string;
   score: string;
   selectedQuestions: QuestionInterface[];
   selectedAnswers: {
     [key: number]: string;
   };
+}
+
+export interface AuthStudentInterface {
+  paperId?: number;
+  paperTitle?: string;
+  name: string;
+  class: string;
 }

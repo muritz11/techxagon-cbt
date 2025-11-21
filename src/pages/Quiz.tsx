@@ -3,13 +3,19 @@ import { Clock, CheckCircle, XCircle } from "lucide-react";
 import Questions from "../assets/data/questions.json";
 import StudentClasses from "../assets/data/classes.json";
 import { useNavigate } from "react-router-dom";
-import type { QuestionInterface, QuizResultInterface } from "../utils/types";
+import type {
+  AuthStudentInterface,
+  QuestionInterface,
+  QuizResultInterface,
+} from "../utils/types";
 
-const QUESTION_LENGTH = 10;
+const QUESTION_LENGTH = 12;
+const QUESTION_WEIGHT = 5;
 // quiz duration in seconds
-const QUIZ_DURATION = 300;
+const QUIZ_DURATION = 600;
 
 const Quiz = () => {
+  const minutes = Math.floor(QUIZ_DURATION / 60);
   const navigate = useNavigate();
   const [selectedQuestions, setSelectedQuestions] = useState<
     QuestionInterface[]
@@ -21,7 +27,9 @@ const Quiz = () => {
   const [timeRemaining, setTimeRemaining] = useState(QUIZ_DURATION);
   const [isQuizComplete, setIsQuizComplete] = useState(false);
   const [isQuizStarted, setIsQuizStarted] = useState(false);
-  const student = JSON.parse(localStorage.getItem("student") || "null");
+  const student: AuthStudentInterface | null = JSON.parse(
+    localStorage.getItem("student") || "null"
+  );
 
   useEffect(() => {
     if (!student) {
@@ -47,7 +55,9 @@ const Quiz = () => {
   }, [isQuizStarted, isQuizComplete, timeRemaining]);
 
   const startQuiz = () => {
-    const shuffled = [...Questions].sort(() => Math.random() - 0.5);
+    const shuffled = [...Questions]
+      .filter((val) => val.paperId === student?.paperId)
+      .sort(() => Math.random() - 0.5);
     const selected = shuffled.slice(0, QUESTION_LENGTH);
     setSelectedQuestions(selected);
     setIsQuizStarted(true);
@@ -113,9 +123,17 @@ const Quiz = () => {
           <h1 className="text-3xl font-bold text-gray-800 mb-4">
             Ready to Start?
           </h1>
-          <p className="text-gray-600 mb-6">
-            You'll have 5 minutes to answer {QUESTION_LENGTH} questions
+
+          {/* Paper Title */}
+          <p className="text-lg font-semibold text-gray-800 mb-2">
+            Paper: {student?.paperTitle || "Untitled Paper"}
           </p>
+
+          <p className="text-gray-600 mb-6">
+            You'll have {minutes} {minutes === 1 ? "minute" : "minutes"} to
+            answer {QUESTION_LENGTH} questions
+          </p>
+
           <button
             onClick={startQuiz}
             className="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
@@ -165,7 +183,8 @@ const Quiz = () => {
             {/* Score */}
             <div className="text-center mb-8">
               <div className="text-6xl font-bold text-indigo-600 mb-2">
-                {score}/{selectedQuestions.length}
+                {score * QUESTION_WEIGHT}/
+                {selectedQuestions.length * QUESTION_WEIGHT}
               </div>
               <div className="text-2xl text-gray-600">
                 {percentage.toFixed(0)}%
@@ -204,6 +223,13 @@ const Quiz = () => {
                       <h3 className="font-semibold text-gray-800 mb-3">
                         {idx + 1}. {q.question}
                       </h3>
+                      {!userAnswer ? (
+                        <p className="italic text-red-800 mb-3">
+                          {"No answer provided"}
+                        </p>
+                      ) : (
+                        ""
+                      )}
                       <div className="space-y-2 mb-3">
                         {q.options.map((option, optIdx) => (
                           <div
