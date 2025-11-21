@@ -3,16 +3,14 @@ import { Clock, CheckCircle, XCircle } from "lucide-react";
 import Questions from "../assets/data/questions.json";
 import StudentClasses from "../assets/data/classes.json";
 import { useNavigate } from "react-router-dom";
-import type {
-  AuthStudentInterface,
-  QuestionInterface,
-  QuizResultInterface,
+import {
+  QUESTION_LENGTH,
+  QUESTION_WEIGHT,
+  QUIZ_DURATION,
+  type AuthStudentInterface,
+  type QuestionInterface,
+  type QuizResultInterface,
 } from "../utils/types";
-
-const QUESTION_LENGTH = 12;
-const QUESTION_WEIGHT = 5;
-// quiz duration in seconds
-const QUIZ_DURATION = 600;
 
 const Quiz = () => {
   const minutes = Math.floor(QUIZ_DURATION / 60);
@@ -147,14 +145,15 @@ const Quiz = () => {
 
   if (isQuizComplete) {
     const score = calculateScore();
-    const percentage = (score / selectedQuestions.length) * 100;
     const summaries: QuizResultInterface[] =
       JSON.parse(localStorage.getItem("results") || "null") || [];
     // const summary: SummaryInterface =
     summaries.push({
       student: student,
       date: new Date()?.toString(),
-      score: `${score}/${selectedQuestions.length}`,
+      score,
+      totalQuesions: QUESTION_LENGTH,
+      quesionWeight: QUESTION_WEIGHT,
       selectedQuestions,
       selectedAnswers,
     });
@@ -185,9 +184,6 @@ const Quiz = () => {
               <div className="text-6xl font-bold text-indigo-600 mb-2">
                 {score * QUESTION_WEIGHT}/
                 {selectedQuestions.length * QUESTION_WEIGHT}
-              </div>
-              <div className="text-2xl text-gray-600">
-                {percentage.toFixed(0)}%
               </div>
             </div>
 

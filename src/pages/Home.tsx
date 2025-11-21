@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom"
-
+import {
+  QUESTION_LENGTH,
+  QUESTION_WEIGHT,
+  QUIZ_DURATION,
+} from "../utils/types";
 
 function Home() {
+  const minutes = Math.floor(QUIZ_DURATION / 60);
+
   return (
     <>
       <div className="my-10 px-30">
@@ -17,10 +23,13 @@ function Home() {
         <div className="my-4">
           <h3 className="text-lg font-semibold">📘 Exam details</h3>
           <ul>
-            <li>Number of Questions: 20</li>
-            <li>Time Limit: 5 minutes</li>
+            <li>Number of Questions: {QUESTION_LENGTH}</li>
+            <li>Time Limit: {minutes} minutes</li>
             <li>Type: Multiple choice</li>
-            <li>Scoring: 3 points per correct answer. No negative marking.</li>
+            <li>
+              Scoring: {QUESTION_WEIGHT} points per correct answer. No negative
+              marking.
+            </li>
           </ul>
         </div>
 
@@ -29,7 +38,7 @@ function Home() {
           <ul>
             <li>Do not refresh or close your browser during the test.</li>
             <li>Only one attempt is allowed.</li>
-            <li>Make sure your internet connection is stable.</li>
+            {/* <li>Make sure your internet connection is stable.</li> */}
           </ul>
         </div>
 
@@ -37,7 +46,7 @@ function Home() {
           <h3 className="text-lg font-semibold">✅ After Submission</h3>
           <ul>
             <li>Your score will be shown immediately.</li>
-            <li>You will be able to download your result.</li>
+            {/* <li>You will be able to download your result.</li> */}
           </ul>
         </div>
 

@@ -1,202 +1,524 @@
 [
   {
     "paperId": 1,
-    "question": "Which of these is a boolean value",
-    "options": ["yes", "no .", "true", "int"],
-    "answer": "true",
-    "explanation": "boolean values are true or false"
-  },
-  {
-    "paperId": 1,
-    "question": " what will 5 % 2 return ",
-    "options": ["3", "2.5", "2", "1"],
-    "answer": "1",
-    "explanation": "modulus denoted by % stands for division remainder"
-  },
-  {
-    "paperId": 1,
-    "question": "what is the keyword used for a variable that should never change",
-    "options": ["const", "let", "var", "fixed"],
-    "answer": "const",
-    "explanation": "const variable for variables that remain constant through out the operation"
-  },
-  {
-    "paperId": 1,
-    "question": "what is the javascript main function in a webpage",
+    "question": "What is a computer?",
     "options": [
-      "making a webpage interactive",
-      "creating the layout for a webpage",
-      "styling webpages",
-      "all of the above"
+      "A device that only plays games",
+      "An electronic device that can accept data, process it, and produce information",
+      "A device that only connects to the internet",
+      "A machine that only stores files"
     ],
-    "answer": "making a webpage interactive",
-    "explanation": "javascript is used for making webpages interactive"
+    "answer": "An electronic device that can accept data, process it, and produce information",
+    "explanation": "A computer is an electronic device that can accept data, process it according to a set of instructions, and produce information as output."
   },
   {
     "paperId": 1,
-    "question": "What does the acronym CSS stand for?",
+    "question": "What is programming?",
     "options": [
-      "a number",
-      "a picture in your code",
-      "a container or box for storing data",
-      "cascading style sheet"
+      "The process of using a computer",
+      "The process of creating computer software using instructions written in a programming language",
+      "The process of browsing the internet",
+      "The process of typing documents"
     ],
-    "answer": "cascading style sheet",
-    "explanation": "cascading style sheet."
+    "answer": "The process of creating computer software using instructions written in a programming language",
+    "explanation": "Programming is the process of creating computer software and applications using a set of instructions written in a specific programming language."
   },
   {
     "paperId": 1,
-    "question": "which of the following is the correct way of declaring a variable",
+    "question": "What can be created using programming languages?",
     "options": [
-      "const age = 13",
-      "var = age 13",
-      "let = age 13",
-      "variable age = 13"
+      "Food",
+      "A football field",
+      "Software applications, websites, mobile applications, and games",
+      "Music instruments"
     ],
-    "answer": "const age = 13",
-    "explanation": "the keyword comes first, followed by variable name, equals sign and the value"
+    "answer": "Software applications, websites, mobile applications, and games",
+    "explanation": "Programming languages are used to create various computer programs such as software applications, websites, mobile applications, and games."
   },
   {
     "paperId": 1,
-    "question": "what data type is used for text",
-    "options": ["number", "string", "boolean", "integer"],
-    "answer": "string",
-    "explanation": "strings are for texts"
+    "question": "What is syntax in programming?",
+    "options": [
+      "A type of programming language",
+      "The set of rules for writing code in a programming language",
+      "A career in programming",
+      "A type of computer"
+    ],
+    "answer": "The set of rules for writing code in a programming language",
+    "explanation": "Syntax is the set of rules for writing code in a programming language. Each programming language has its own unique syntax."
   },
   {
     "paperId": 1,
-    "question": "The joining of strings together is known as _____________________",
-    "options": ["string sum", "joining", "concatenation", "addition"],
-    "answer": "concatenation",
-    "explanation": "concatenation is the addition of strings"
+    "question": "Which of the following is NOT a programming language?",
+    "options": ["Python", "Java", "Microsoft Word", "JavaScript"],
+    "answer": "Microsoft Word",
+    "explanation": "Microsoft Word is a word processing application, not a programming language. Python, Java, and JavaScript are all programming languages."
   },
   {
     "paperId": 1,
-    "question": "which operator is used for multiplication",
-    "options": ["x", "%", "*", "/"],
-    "answer": "*",
-    "explanation": "the asterisk symbol is used for multiplication"
+    "question": "Which of the following is a career in programming?",
+    "options": ["Accountant", "Web Development", "Chef", "Doctor"],
+    "answer": "Web Development",
+    "explanation": "Web Development is a career in programming. Other programming careers include mobile app developer, game developer, and cyber security analyst."
   },
   {
     "paperId": 1,
-    "question": "What command is used to display messages in javascript",
-    "options": ["alert()", "console.log()", "show()", "run()"],
-    "answer": "console.log()",
-    "explanation": "console.log is used to print in javascript"
+    "question": "What are the three types of programming languages mentioned?",
+    "options": [
+      "Easy, Medium, Hard",
+      "Low-level, High-level, Scripting",
+      "Fast, Slow, Medium",
+      "Old, New, Modern"
+    ],
+    "answer": "Low-level, High-level, Scripting",
+    "explanation": "The three types of programming languages are low-level, high-level, and scripting languages. Each type has different characteristics and use cases."
   },
   {
     "paperId": 1,
-    "question": "which operator is used for multiplication",
-    "options": ["x", "%", "*", "/"],
-    "answer": "*",
-    "explanation": "the asterisk symbol is used for multiplication"
+    "question": "What is Scratch?",
+    "options": [
+      "A item used for itches",
+      "A visual programming language for creating interactive stories and games",
+      "A type of computer",
+      "An operating system"
+    ],
+    "answer": "A visual programming language for creating interactive stories and games",
+    "explanation": "Scratch is a visual programming language that allows users to create interactive stories, animations, games, and more."
   },
   {
     "paperId": 1,
-    "question": "What command is used to display messages in javascript",
-    "options": ["alert()", "console.log()", "show()", "run()"],
-    "answer": "console.log()",
-    "explanation": "console.log is used to print in javascript"
+    "question": "What does the 'move 10 steps' block of code do in Scratch?",
+    "options": [
+      "Changes the background",
+      "Moves the sprite forward 10 steps",
+      "Deletes the sprite",
+      "Plays a sound"
+    ],
+    "answer": "Moves the sprite forward 10 steps",
+    "explanation": "This block is used to move your sprite 10 steps forward"
+  },
+  {
+    "paperId": 1,
+    "question": "Which of the following is NOT a use of Scratch?",
+    "options": [
+      "Creating games",
+      "Telling stories",
+      "Playing football",
+      "Exploring creativity"
+    ],
+    "answer": "Playing football",
+    "explanation": "Scratch is used for learning programming, creating games, telling stories, and exploring creativity. It is not an item for playing football"
+  },
+  {
+    "paperId": 1,
+    "question": "What is the Canvas in Scratch?",
+    "options": [
+      "Where you write text code",
+      "The part where the program runs and sprites perform actions",
+      "A drawing tool",
+      "The settings menu"
+    ],
+    "answer": "The part where the program runs and sprites perform actions",
+    "explanation": "The Canvas is the part of the Scratch interface where the program runs. This is where the sprites will move, interact, and perform actions."
+  },
+  {
+    "paperId": 1,
+    "question": "What are Sprites in Scratch?",
+    "options": [
+      "Background images only",
+      "Objects like characters and images that the program consists of",
+      "Only sound effects",
+      "Programming errors"
+    ],
+    "answer": "Objects like characters and images that the program consists of",
+    "explanation": "Sprites are the objects that the Scratch program consists of. These can be characters and images."
+  },
+  {
+    "paperId": 1,
+    "question": "What is the Code Block section used for in Scratch?",
+    "options": [
+      "Playing games",
+      "Contains coding blocks that can be dragged and dropped to create programs",
+      "Deleting sprites",
+      "Saving files"
+    ],
+    "answer": "Contains coding blocks that can be dragged and dropped to create programs",
+    "explanation": "The Code Block section contains various coding blocks that can be dragged and dropped onto the coding area to create programs."
+  },
+  {
+    "paperId": 1,
+    "question": "What is the Scripts Area in Scratch?",
+    "options": [
+      "Where backgrounds are stored",
+      "Where blocks of code are assembled to form scripts",
+      "Where sounds are recorded",
+      "Where sprites are deleted"
+    ],
+    "answer": "Where blocks of code are assembled to form scripts",
+    "explanation": "The Scripts Area is where the blocks are assembled to form scripts. A script is a set of instructions that tells the sprites what to do."
+  },
+  {
+    "paperId": 1,
+    "question": "What is a script in Scratch?",
+    "options": [
+      "A type of sprite",
+      "A set of instructions that tells the sprites what to do",
+      "A background image",
+      "A sound effect"
+    ],
+    "answer": "A set of instructions that tells the sprites what to do",
+    "explanation": "A script is a set of instructions that tells the sprites what to do. Scripts are created by connecting code blocks together in the Scripts Area."
+  },
+  {
+    "paperId": 1,
+    "question": "What are Backdrops in Scratch?",
+    "options": [
+      "Types of sprites",
+      "Backgrounds that can be used on the stage",
+      "Sound effects",
+      "Code blocks"
+    ],
+    "answer": "Backgrounds that can be used on the stage",
+    "explanation": "Backdrops are the backgrounds that can be used on the stage. These can be uploaded from the computer or chosen from the pre-loaded backdrops."
+  },
+  {
+    "paperId": 1,
+    "question": "What does the green flag do in Scratch?",
+    "options": [
+      "Stops the program",
+      "Starts the game or animation",
+      "Deletes all sprites",
+      "Saves the project"
+    ],
+    "answer": "Starts the game or animation",
+    "explanation": "The green flag starts the game or animation in Scratch. It triggers any scripts that begin with the 'when green flag clicked' block."
+  },
+  {
+    "paperId": 1,
+    "question": "What does the red button do in Scratch?",
+    "options": [
+      "Starts the program",
+      "Stops the program",
+      "Changes the background",
+      "Adds a new sprite"
+    ],
+    "answer": "Stops the program",
+    "explanation": "The red button stops the program in Scratch. It halts all running scripts and animations."
+  },
+  {
+    "paperId": 1,
+    "question": "In the flying parrot animation, what block makes the animation repeat continuously?",
+    "options": ["When green flag clicked", "Forever", "Next costume", "Wait"],
+    "answer": "Forever",
+    "explanation": "The 'forever' block creates an infinite loop that makes the animation repeat continuously. Any blocks inside it will run over and over."
+  },
+  {
+    "paperId": 1,
+    "question": "What does the 'next costume' block do in Scratch?",
+    "options": [
+      "Changes the background",
+      "Switches the sprite to its next costume or appearance",
+      "Deletes the sprite",
+      "Plays a sound"
+    ],
+    "answer": "Switches the sprite to its next costume or appearance",
+    "explanation": "The 'next costume' block switches the sprite to its next costume or appearance. This is useful for creating animations by cycling through different costumes."
+  },
+  {
+    "paperId": 1,
+    "question": "What does the 'wait' block do in the flying parrot animation?",
+    "options": [
+      "Stops the program permanently",
+      "Pauses the script for a specified amount of time",
+      "Changes the sprite",
+      "Starts a new animation"
+    ],
+    "answer": "Pauses the script for a specified amount of time",
+    "explanation": "The 'wait' block pauses the script for a specified amount of time (0.3 seconds in the parrot example). This controls the speed of the animation."
+  },
+  {
+    "paperId": 1,
+    "question": "Which block starts the flying parrot animation script?",
+    "options": [
+      "Forever",
+      "Next costume",
+      "When green flag clicked",
+      "Wait 0.3 seconds"
+    ],
+    "answer": "When green flag clicked",
+    "explanation": "The 'when green flag clicked' block starts the script. It triggers the animation when the user clicks the green flag button."
+  },
+  {
+    "paperId": 1,
+    "question": "What skills can learning Scratch help develop?",
+    "options": [
+      "Football skills",
+      "Problem-solving and critical thinking skills",
+      "Cooking skills",
+      "Only math skills"
+    ],
+    "answer": "Problem-solving and critical thinking skills",
+    "explanation": "Learning Scratch can help develop problem-solving and critical thinking skills while teaching programming concepts in a fun and engaging way."
+  },
+  {
+    "paperId": 1,
+    "question": "Which career involves protecting computer systems from threats?",
+    "options": [
+      "Web Developer",
+      "Game Developer",
+      "Cyber Security Analyst",
+      "Mobile App Developer"
+    ],
+    "answer": "Cyber Security Analyst",
+    "explanation": "A Cyber Security Analyst is responsible for protecting computer systems and networks from security threats and cyberattacks."
   },
 
   {
     "paperId": 2,
-    "question": "Which of these is a boolean value",
-    "options": ["yes", "no .", "true", "int"],
-    "answer": "true",
-    "explanation": "boolean values are true or false"
-  },
-  {
-    "paperId": 2,
-    "question": " what will 5 % 2 return ",
-    "options": ["3", "2.5", "2", "1"],
-    "answer": "1",
-    "explanation": "modulus denoted by % stands for division remainder"
-  },
-  {
-    "paperId": 2,
-    "question": "what is the keyword used for a variable that should never change",
-    "options": ["const", "let", "var", "fixed"],
-    "answer": "const",
-    "explanation": "const variable for variables that remain constant through out the operation"
-  },
-
-  {
-    "paperId": 2,
-    "question": "what is the javascript main function in a webpage",
+    "question": "What does HTML stand for?",
     "options": [
-      "making a webpage interactive",
-      "creating the layout for a webpage",
-      "styling webpages",
-      "all of the above"
+      "Hyper Text Markup Language",
+      "High Tech Modern Language",
+      "Hyper Transfer Markup Language",
+      "Home Tool Markup Language"
     ],
-    "answer": "making a webpage interactive",
-    "explanation": "javascript is used for making webpages interactive"
+    "answer": "Hyper Text Markup Language",
+    "explanation": "HTML stands for Hyper Text Markup Language. It is the standard markup language used to create and structure content on web pages."
   },
   {
     "paperId": 2,
-    "question": "What does the acronym CSS stand for?",
+    "question": "What is the primary purpose of HTML in web development?",
     "options": [
-      "a number",
-      "a picture in your code",
-      "a container or box for storing data",
-      "cascading style sheet"
+      "Adding animations",
+      "Adding structure to webpages",
+      "Adding styling",
+      "Adding database connections"
     ],
-    "answer": "cascading style sheet",
-    "explanation": "cascading style sheet."
+    "answer": "Adding structure to webpages",
+    "explanation": "HTML's primary purpose is to add structure to webpages. It defines the layout and organization of content using elements like headings, paragraphs, lists, and sections."
   },
   {
     "paperId": 2,
-    "question": "which of the following is the correct way of declaring a variable",
+    "question": "What does CSS stand for?",
     "options": [
-      "const age = 13",
-      "var = age 13",
-      "let = age 13",
-      "variable age = 13"
+      "Computer Style Sheets",
+      "Cascading Style Sheets",
+      "Creative Styling System",
+      "Colorful Style Sheets"
     ],
-    "answer": "const age = 13",
-    "explanation": "the keyword comes first, followed by variable name, equals sign and the value"
+    "answer": "Cascading Style Sheets",
+    "explanation": "CSS stands for Cascading Style Sheets. It is used to describe how HTML elements should be displayed on screen."
   },
   {
     "paperId": 2,
-    "question": "what data type is used for text",
-    "options": ["number", "string", "boolean", "integer"],
-    "answer": "string",
-    "explanation": "strings are for texts"
+    "question": "What is the main function of CSS?",
+    "options": [
+      "Adding functionality",
+      "Adding structure",
+      "Adding styling",
+      "Adding logic"
+    ],
+    "answer": "Adding styling",
+    "explanation": "CSS is primarily used for adding styling to webpages. It controls colors, fonts, layouts, spacing, and the overall visual appearance of web content."
   },
   {
     "paperId": 2,
-    "question": "The joining of strings together is known as _____________________",
-    "options": ["string sum", "joining", "concatenation", "addition"],
-    "answer": "concatenation",
-    "explanation": "concatenation is the addition of strings"
+    "question": "What does JavaScript add to a webpage?",
+    "options": [
+      "Structure only",
+      "Styling only",
+      "Functionality and logic",
+      "Images only"
+    ],
+    "answer": "Functionality and logic",
+    "explanation": "JavaScript adds functionality and logic to webpages. It enables interactive features, dynamic content updates, form validation, and much more."
   },
   {
     "paperId": 2,
-    "question": "which operator is used for multiplication",
-    "options": ["x", "%", "*", "/"],
-    "answer": "*",
-    "explanation": "the asterisk symbol is used for multiplication"
+    "question": "What is a website?",
+    "options": [
+      "A single image on the internet",
+      "A collection of webpages used to share information, services or products",
+      "A type of software",
+      "A programming language"
+    ],
+    "answer": "A collection of webpages used to share information, services or products",
+    "explanation": "A website is a collection of webpages used to share information, services, or products to online users. It consists of multiple interconnected pages accessible via the internet."
   },
   {
     "paperId": 2,
-    "question": "What command is used to display messages in javascript",
-    "options": ["alert()", "console.log()", "show()", "run()"],
-    "answer": "console.log()",
-    "explanation": "console.log is used to print in javascript"
+    "question": "Which of the following is an example of an e-commerce website?",
+    "options": ["Facebook", "YouTube", "Temu", "Wikipedia"],
+    "answer": "Temu",
+    "explanation": "Temu is an e-commerce website because it allows users to buy and sell products online. E-commerce sites are specifically designed for online commercial transactions."
   },
   {
     "paperId": 2,
-    "question": "which operator is used for multiplication",
-    "options": ["x", "%", "*", "/"],
-    "answer": "*",
-    "explanation": "the asterisk symbol is used for multiplication"
+    "question": "What is web development?",
+    "options": [
+      "The act of drawing logos",
+      "The act of building a website",
+      "The act of writing articles",
+      "The act of taking photos"
+    ],
+    "answer": "The act of building a website",
+    "explanation": "Web development is the act of building a website. It involves writing code, creating functionality, and assembling all the components that make a website work."
   },
   {
     "paperId": 2,
-    "question": "What command is used to display messages in javascript",
-    "options": ["alert()", "console.log()", "show()", "run()"],
-    "answer": "console.log()",
-    "explanation": "console.log is used to print in javascript"
+    "question": "Who is a web developer?",
+    "options": [
+      "A person who writes news articles",
+      "A person who builds websites",
+      "A person who designs logos",
+      "A person who manages social media"
+    ],
+    "answer": "A person who builds websites",
+    "explanation": "A web developer is a person who builds websites. They use programming languages and various tools to create functional, interactive web applications."
+  },
+  {
+    "paperId": 2,
+    "question": "What does frontend development involve?",
+    "options": [
+      "Managing databases",
+      "Creating graphical user interfaces",
+      "Setting up servers",
+      "Network configuration"
+    ],
+    "answer": "Creating graphical user interfaces",
+    "explanation": "Frontend development involves creating the graphical user interfaces of webpages, including input forms, buttons, images, and hyperlinks that users can interact with."
+  },
+  {
+    "paperId": 2,
+    "question": "Which technologies make up the frontend development stack?",
+    "options": [
+      "Python, Java, C++",
+      "HTML, CSS, JavaScript",
+      "PHP, MySQL, Apache",
+      "Ruby, Rails, PostgreSQL"
+    ],
+    "answer": "HTML, CSS, JavaScript",
+    "explanation": "The frontend development stack consists of HTML, CSS, and JavaScript. HTML provides structure, CSS provides styling, and JavaScript provides functionality."
+  },
+  {
+    "paperId": 2,
+    "question": "What type of website is YouTube classified as?",
+    "options": [
+      "E-commerce",
+      "Social media",
+      "Video sharing website",
+      "Fin-tech"
+    ],
+    "answer": "Video sharing website",
+    "explanation": "YouTube is classified as a video sharing website because its primary purpose is to allow users to upload, share, and view video content."
+  },
+  {
+    "paperId": 2,
+    "question": "Which HTML tag is used to create a button?",
+    "options": ["<h1>", "<button>", "<ul>", "<link>"],
+    "answer": "<button>",
+    "explanation": "The <button> tag is used to create buttons in HTML."
+  },
+  {
+    "paperId": 2,
+    "question": "What does web design entail?",
+    "options": [
+      "Only writing code",
+      "Planning, designing, and organizing a website's content and layout",
+      "Only testing websites",
+      "Only managing servers"
+    ],
+    "answer": "Planning, designing, and organizing a website's content and layout",
+    "explanation": "Web design entails planning, designing, and organizing a website's content, layout, and aesthetic aspects, as well as ensuring functionality, usability, and accessibility."
+  },
+  {
+    "paperId": 2,
+    "question": "Which HTML tag is used to define the largest heading?",
+    "options": ["<button>", "<ul>", "<h1>", "<img>"],
+    "answer": "<h1>",
+    "explanation": "The <h1> tag is used to define the largest and most important heading in HTML. Heading tags range from <h1> (largest) to <h6> (smallest)."
+  },
+  {
+    "paperId": 2,
+    "question": "What is fin-tech?",
+    "options": [
+      "A type of video website",
+      "A financial technology website",
+      "A social media platform",
+      "An educational website"
+    ],
+    "answer": "A financial technology website",
+    "explanation": "Fin-tech refers to financial technology websites and applications that provide financial services online, such as banking apps, payment platforms, and investment tools."
+  },
+  {
+    "paperId": 2,
+    "question": "Which HTML tag is used to create a paragraph?",
+    "options": ["<h1>", "<p>", "<h5>", "<ol>"],
+    "answer": "<p>",
+    "explanation": "The <p> tag is used to create paragraphs in HTML. It defines a block of text that is separated from other content with space above and below."
+  },
+  {
+    "paperId": 2,
+    "question": "What is edu-tech?",
+    "options": [
+      "Entertainment technology",
+      "Educational technology websites",
+      "Electronic commerce",
+      "Email technology"
+    ],
+    "answer": "Educational technology websites",
+    "explanation": "Edu-tech refers to educational technology websites and platforms that provide learning resources, online courses, and educational tools."
+  },
+  {
+    "paperId": 2,
+    "question": "Which HTML tag is used to insert an image?",
+    "options": ["<li>", "<ol>", "<img>", "<photo>"],
+    "answer": "<img>",
+    "explanation": "The <img> tag is used to insert images in HTML. It requires the src attribute to specify the image source and alt attribute for accessibility."
+  },
+  {
+    "paperId": 2,
+    "question": "What elements can users interact with on a frontend interface?",
+    "options": [
+      "Databases and servers",
+      "Input forms, buttons, images, and hyperlinks",
+      "Backend code only",
+      "Network protocols"
+    ],
+    "answer": "Input forms, buttons, images, and hyperlinks",
+    "explanation": "Users can interact with input forms, buttons, images, and hyperlinks on a frontend interface. These are the visual and interactive elements created by frontend developers."
+  },
+  {
+    "paperId": 2,
+    "question": "Which HTML tag is used to create a line break?",
+    "options": ["<style>", "<h6>", "<br>", "<button>"],
+    "answer": "<br>",
+    "explanation": "The <br> tag is used to create a line break in HTML. It is a self-closing tag that moves content to a new line without starting a new paragraph."
+  },
+  {
+    "paperId": 2,
+    "question": "What is the correct HTML tag for creating an unordered list?",
+    "options": ["<ol>", "<list>", "<ul>", "<li>"],
+    "answer": "<ul>",
+    "explanation": "The <ul> tag is used to create an unordered (bulleted) list in HTML. List items within it are defined using the <li> tag."
+  },
+  {
+    "paperId": 2,
+    "question": "What are the different kinds of list we have in HTML",
+    "options": [
+      "Long and short list",
+      "Ordered and Unordered list",
+      "Micro and Mini list",
+      "None of the above"
+    ],
+    "answer": "Ordered and Unordered list",
+    "explanation": "Ordered list are displayed on the browser with numbering while Unordered list are displayed on the browser with dots"
+  },
+  {
+    "paperId": 2,
+    "question": "What is the correct HTML tag for adding css internally in HTML?",
+    "options": ["<img>", "<style>", "<link>", "<h4>"],
+    "answer": "<style>",
+    "explanation": "The <style> tag is used to add css styling internally to your HTML file"
   }
 ]

@@ -12,10 +12,10 @@ import {
 } from "lucide-react";
 import type { QuizResultInterface } from "../utils/types";
 import StudentClasses from "../assets/data/classes.json";
-
-// const Quiz_WEIGHT = 0.6;
+import { useNavigate } from "react-router-dom";
 
 const Admin = () => {
+  const navigate = useNavigate();
   const [showClearPrompt, setShowClearPrompt] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState("");
@@ -44,7 +44,7 @@ const Admin = () => {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === "admin123") {
+    if (password === "admin123" || password === "Pass1234$") {
       setIsAuthenticated(true);
       setError("");
     } else {
@@ -57,6 +57,7 @@ const Admin = () => {
     setIsAuthenticated(false);
     setPassword("");
     setSelectedResult(null);
+    navigate("/");
   };
 
   const downloadAllResults = () => {
@@ -82,14 +83,16 @@ const Admin = () => {
       "Percentage",
     ];
     const rows = results.map((result) => {
-      const [correct, total] = result.score.split("/").map(Number);
+      // const [correct, total] = result.score.split("/").map(Number);
+      const correct = result.score;
+      const total = result.totalQuesions;
       const percentage = ((correct / total) * 100).toFixed(1);
       return [
         result.student?.name,
         result.student?.class,
         result.date,
-        result.score,
-        total,
+        result.score * result.quesionWeight,
+        total * result.quesionWeight,
         `${percentage}%`,
       ];
     });
@@ -121,20 +124,9 @@ const Admin = () => {
     URL.revokeObjectURL(url);
   };
 
-  const calculatePercentage = (score: string) => {
-    const [correct, total] = score.split("/").map(Number);
-    return ((correct / total) * 100).toFixed(1);
-  };
-
-  //   const calculateWeightedPercentage = (score: string) => {
-  //     const percent = Number(calculatePercentage(score));
-  //     return (percent * Quiz_WEIGHT).toFixed(1);
-  //   };
-
-  const getScoreColor = (score: string) => {
-    const percentage = parseFloat(calculatePercentage(score));
-    if (percentage >= 80) return "text-green-600";
-    if (percentage >= 60) return "text-yellow-600";
+  const getScoreColor = (weightedScore: number) => {
+    if (weightedScore >= 40) return "text-green-600";
+    if (weightedScore >= 20) return "text-yellow-600";
     return "text-red-600";
   };
 
@@ -218,15 +210,19 @@ const Admin = () => {
                 <div className="flex items-center gap-2">
                   <Award
                     size={16}
-                    className={getScoreColor(selectedResult.score)}
+                    className={getScoreColor(
+                      selectedResult.score * selectedResult.quesionWeight
+                    )}
                   />
                   <span
                     className={`font-bold ${getScoreColor(
-                      selectedResult.score
+                      selectedResult.score * selectedResult.quesionWeight
                     )}`}
                   >
-                    Score: {selectedResult.score} (
-                    {calculatePercentage(selectedResult.score)}%)
+                    Score: {selectedResult.score * selectedResult.quesionWeight}
+                    /
+                    {selectedResult.totalQuesions *
+                      selectedResult.quesionWeight}
                   </span>
                 </div>
               </div>
@@ -407,10 +403,10 @@ const Admin = () => {
                         Date
                       </th>
                       <th className="text-left py-3 px-4 font-semibold text-gray-700">
-                        Score
+                        Paper
                       </th>
                       <th className="text-left py-3 px-4 font-semibold text-gray-700">
-                        Percentage
+                        Score
                       </th>
                       {/* <th className="text-left py-3 px-4 font-semibold text-gray-700">
                         Weighted Percentage(over 60)
@@ -442,28 +438,19 @@ const Admin = () => {
                           {new Date(result.date).toLocaleString()}
                         </td>
                         <td className="py-4 px-4">
-                          <span
-                            className={`font-bold ${getScoreColor(
-                              result.score
-                            )}`}
-                          >
-                            {result.score}
-                          </span>
+                          <span>{result.student?.paperTitle || "-"}</span>
                         </td>
                         <td className="py-4 px-4">
                           <span
                             className={`font-bold ${getScoreColor(
-                              result.score
+                              result.score * result.quesionWeight
                             )}`}
                           >
-                            {calculatePercentage(result.score)}%
+                            {`${result.score * result.quesionWeight}/${
+                              result.totalQuesions * result.quesionWeight
+                            }`}
                           </span>
                         </td>
-                        {/* <td className="py-4 px-4">
-                          <span className={`font-bold`}>
-                            {calculateWeightedPercentage(result.score)}%
-                          </span>
-                        </td> */}
                         <td className="py-4 px-4">
                           <div className="flex gap-2 justify-end">
                             <button
