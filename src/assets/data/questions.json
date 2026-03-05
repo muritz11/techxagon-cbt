@@ -1,524 +1,648 @@
 [
   {
-    "paperId": 1,
-    "question": "What is a computer?",
+    "PaperId": 1,
+    "question": "What is web development?",
     "options": [
-      "A device that only plays games",
-      "An electronic device that can accept data, process it, and produce information",
-      "A device that only connects to the internet",
-      "A machine that only stores files"
+      "Only creating logos",
+      "The comprehensive process of creating, building, and maintaining websites and web applications",
+      "Only writing blog posts",
+      "Only taking photos for websites"
     ],
-    "answer": "An electronic device that can accept data, process it, and produce information",
-    "explanation": "A computer is an electronic device that can accept data, process it according to a set of instructions, and produce information as output."
+    "answer": "The comprehensive process of creating, building, and maintaining websites and web applications",
+    "explanation": "Web development is the comprehensive process of creating, building, and maintaining websites and web applications that run online."
   },
   {
-    "paperId": 1,
-    "question": "What is programming?",
+    "PaperId": 1,
+    "question": "What is a website?",
     "options": [
-      "The process of using a computer",
-      "The process of creating computer software using instructions written in a programming language",
-      "The process of browsing the internet",
-      "The process of typing documents"
+      "A single image on the internet",
+      "A computer program",
+      "A collection of webpages used to share information, services or products",
+      "A type of software"
     ],
-    "answer": "The process of creating computer software using instructions written in a programming language",
-    "explanation": "Programming is the process of creating computer software and applications using a set of instructions written in a specific programming language."
+    "answer": "A collection of webpages used to share information, services or products",
+    "explanation": "A website is a collection of webpages used to share information, services, or products to online users."
   },
   {
-    "paperId": 1,
-    "question": "What can be created using programming languages?",
+    "PaperId": 1,
+    "question": "What type of website is Temu.com?",
     "options": [
-      "Food",
-      "A football field",
-      "Software applications, websites, mobile applications, and games",
-      "Music instruments"
+      "E-commerce website",
+      "Portfolio website",
+      "SaaS website",
+      "Static school website"
     ],
-    "answer": "Software applications, websites, mobile applications, and games",
-    "explanation": "Programming languages are used to create various computer programs such as software applications, websites, mobile applications, and games."
+    "answer": "E-commerce website",
+    "explanation": "Temu.com is an e-commerce website used to share and sell products online."
   },
   {
-    "paperId": 1,
-    "question": "What is syntax in programming?",
+    "PaperId": 1,
+    "question": "What type of website is Jumia.com.ng?",
+    "options": ["Portfolio", "E-commerce", "Social media", "Educational"],
+    "answer": "E-commerce",
+    "explanation": "Jumia.com.ng is an e-commerce website that shares and sells products to online users."
+  },
+  {
+    "PaperId": 1,
+    "question": "What is a portfolio website primarily used for?",
     "options": [
-      "A type of programming language",
-      "The set of rules for writing code in a programming language",
-      "A career in programming",
-      "A type of computer"
+      "Selling products",
+      "Sharing information about a person's work and skills",
+      "Streaming videos",
+      "Social networking"
     ],
-    "answer": "The set of rules for writing code in a programming language",
-    "explanation": "Syntax is the set of rules for writing code in a programming language. Each programming language has its own unique syntax."
+    "answer": "Sharing information about a person's work and skills",
+    "explanation": "A portfolio website like thetechsteph.netlify.app is used to share information about a person's work, projects, and skills."
   },
   {
-    "paperId": 1,
-    "question": "Which of the following is NOT a programming language?",
-    "options": ["Python", "Java", "Microsoft Word", "JavaScript"],
-    "answer": "Microsoft Word",
-    "explanation": "Microsoft Word is a word processing application, not a programming language. Python, Java, and JavaScript are all programming languages."
-  },
-  {
-    "paperId": 1,
-    "question": "Which of the following is a career in programming?",
-    "options": ["Accountant", "Web Development", "Chef", "Doctor"],
-    "answer": "Web Development",
-    "explanation": "Web Development is a career in programming. Other programming careers include mobile app developer, game developer, and cyber security analyst."
-  },
-  {
-    "paperId": 1,
-    "question": "What are the three types of programming languages mentioned?",
+    "PaperId": 1,
+    "question": "What does SaaS stand for?",
     "options": [
-      "Easy, Medium, Hard",
-      "Low-level, High-level, Scripting",
-      "Fast, Slow, Medium",
-      "Old, New, Modern"
+      "Software as a Service",
+      "Style and a System",
+      "Server and a Site",
+      "Simple and Secure"
     ],
-    "answer": "Low-level, High-level, Scripting",
-    "explanation": "The three types of programming languages are low-level, high-level, and scripting languages. Each type has different characteristics and use cases."
+    "answer": "Software as a Service",
+    "explanation": "SaaS stands for Software as a Service, referring to software delivered over the internet as a service rather than installed locally."
   },
   {
-    "paperId": 1,
-    "question": "What is Scratch?",
-    "options": [
-      "A item used for itches",
-      "A visual programming language for creating interactive stories and games",
-      "A type of computer",
-      "An operating system"
-    ],
-    "answer": "A visual programming language for creating interactive stories and games",
-    "explanation": "Scratch is a visual programming language that allows users to create interactive stories, animations, games, and more."
+    "PaperId": 1,
+    "question": "What type of website is Netflix?",
+    "options": ["E-commerce", "Portfolio", "SaaS", "Static website"],
+    "answer": "SaaS",
+    "explanation": "Netflix is a SaaS (Software as a Service) website that provides streaming services to users online."
   },
   {
-    "paperId": 1,
-    "question": "What does the 'move 10 steps' block of code do in Scratch?",
-    "options": [
-      "Changes the background",
-      "Moves the sprite forward 10 steps",
-      "Deletes the sprite",
-      "Plays a sound"
-    ],
-    "answer": "Moves the sprite forward 10 steps",
-    "explanation": "This block is used to move your sprite 10 steps forward"
+    "PaperId": 1,
+    "question": "What does Spotify primarily share with users?",
+    "options": ["Products", "Information", "Service", "Static content only"],
+    "answer": "Service",
+    "explanation": "Spotify is a SaaS platform that shares music streaming services with users."
   },
   {
-    "paperId": 1,
-    "question": "Which of the following is NOT a use of Scratch?",
-    "options": [
-      "Creating games",
-      "Telling stories",
-      "Playing football",
-      "Exploring creativity"
-    ],
-    "answer": "Playing football",
-    "explanation": "Scratch is used for learning programming, creating games, telling stories, and exploring creativity. It is not an item for playing football"
-  },
-  {
-    "paperId": 1,
-    "question": "What is the Canvas in Scratch?",
-    "options": [
-      "Where you write text code",
-      "The part where the program runs and sprites perform actions",
-      "A drawing tool",
-      "The settings menu"
-    ],
-    "answer": "The part where the program runs and sprites perform actions",
-    "explanation": "The Canvas is the part of the Scratch interface where the program runs. This is where the sprites will move, interact, and perform actions."
-  },
-  {
-    "paperId": 1,
-    "question": "What are Sprites in Scratch?",
-    "options": [
-      "Background images only",
-      "Objects like characters and images that the program consists of",
-      "Only sound effects",
-      "Programming errors"
-    ],
-    "answer": "Objects like characters and images that the program consists of",
-    "explanation": "Sprites are the objects that the Scratch program consists of. These can be characters and images."
-  },
-  {
-    "paperId": 1,
-    "question": "What is the Code Block section used for in Scratch?",
-    "options": [
-      "Playing games",
-      "Contains coding blocks that can be dragged and dropped to create programs",
-      "Deleting sprites",
-      "Saving files"
-    ],
-    "answer": "Contains coding blocks that can be dragged and dropped to create programs",
-    "explanation": "The Code Block section contains various coding blocks that can be dragged and dropped onto the coding area to create programs."
-  },
-  {
-    "paperId": 1,
-    "question": "What is the Scripts Area in Scratch?",
-    "options": [
-      "Where backgrounds are stored",
-      "Where blocks of code are assembled to form scripts",
-      "Where sounds are recorded",
-      "Where sprites are deleted"
-    ],
-    "answer": "Where blocks of code are assembled to form scripts",
-    "explanation": "The Scripts Area is where the blocks are assembled to form scripts. A script is a set of instructions that tells the sprites what to do."
-  },
-  {
-    "paperId": 1,
-    "question": "What is a script in Scratch?",
-    "options": [
-      "A type of sprite",
-      "A set of instructions that tells the sprites what to do",
-      "A background image",
-      "A sound effect"
-    ],
-    "answer": "A set of instructions that tells the sprites what to do",
-    "explanation": "A script is a set of instructions that tells the sprites what to do. Scripts are created by connecting code blocks together in the Scripts Area."
-  },
-  {
-    "paperId": 1,
-    "question": "What are Backdrops in Scratch?",
-    "options": [
-      "Types of sprites",
-      "Backgrounds that can be used on the stage",
-      "Sound effects",
-      "Code blocks"
-    ],
-    "answer": "Backgrounds that can be used on the stage",
-    "explanation": "Backdrops are the backgrounds that can be used on the stage. These can be uploaded from the computer or chosen from the pre-loaded backdrops."
-  },
-  {
-    "paperId": 1,
-    "question": "What does the green flag do in Scratch?",
-    "options": [
-      "Stops the program",
-      "Starts the game or animation",
-      "Deletes all sprites",
-      "Saves the project"
-    ],
-    "answer": "Starts the game or animation",
-    "explanation": "The green flag starts the game or animation in Scratch. It triggers any scripts that begin with the 'when green flag clicked' block."
-  },
-  {
-    "paperId": 1,
-    "question": "What does the red button do in Scratch?",
-    "options": [
-      "Starts the program",
-      "Stops the program",
-      "Changes the background",
-      "Adds a new sprite"
-    ],
-    "answer": "Stops the program",
-    "explanation": "The red button stops the program in Scratch. It halts all running scripts and animations."
-  },
-  {
-    "paperId": 1,
-    "question": "In the flying parrot animation, what block makes the animation repeat continuously?",
-    "options": ["When green flag clicked", "Forever", "Next costume", "Wait"],
-    "answer": "Forever",
-    "explanation": "The 'forever' block creates an infinite loop that makes the animation repeat continuously. Any blocks inside it will run over and over."
-  },
-  {
-    "paperId": 1,
-    "question": "What does the 'next costume' block do in Scratch?",
-    "options": [
-      "Changes the background",
-      "Switches the sprite to its next costume or appearance",
-      "Deletes the sprite",
-      "Plays a sound"
-    ],
-    "answer": "Switches the sprite to its next costume or appearance",
-    "explanation": "The 'next costume' block switches the sprite to its next costume or appearance. This is useful for creating animations by cycling through different costumes."
-  },
-  {
-    "paperId": 1,
-    "question": "What does the 'wait' block do in the flying parrot animation?",
-    "options": [
-      "Stops the program permanently",
-      "Pauses the script for a specified amount of time",
-      "Changes the sprite",
-      "Starts a new animation"
-    ],
-    "answer": "Pauses the script for a specified amount of time",
-    "explanation": "The 'wait' block pauses the script for a specified amount of time (0.3 seconds in the parrot example). This controls the speed of the animation."
-  },
-  {
-    "paperId": 1,
-    "question": "Which block starts the flying parrot animation script?",
-    "options": [
-      "Forever",
-      "Next costume",
-      "When green flag clicked",
-      "Wait 0.3 seconds"
-    ],
-    "answer": "When green flag clicked",
-    "explanation": "The 'when green flag clicked' block starts the script. It triggers the animation when the user clicks the green flag button."
-  },
-  {
-    "paperId": 1,
-    "question": "What skills can learning Scratch help develop?",
-    "options": [
-      "Football skills",
-      "Problem-solving and critical thinking skills",
-      "Cooking skills",
-      "Only math skills"
-    ],
-    "answer": "Problem-solving and critical thinking skills",
-    "explanation": "Learning Scratch can help develop problem-solving and critical thinking skills while teaching programming concepts in a fun and engaging way."
-  },
-  {
-    "paperId": 1,
-    "question": "Which career involves protecting computer systems from threats?",
-    "options": [
-      "Web Developer",
-      "Game Developer",
-      "Cyber Security Analyst",
-      "Mobile App Developer"
-    ],
-    "answer": "Cyber Security Analyst",
-    "explanation": "A Cyber Security Analyst is responsible for protecting computer systems and networks from security threats and cyberattacks."
-  },
-
-  {
-    "paperId": 2,
-    "question": "What does HTML stand for?",
-    "options": [
-      "Hyper Text Markup Language",
-      "High Tech Modern Language",
-      "Hyper Transfer Markup Language",
-      "Home Tool Markup Language"
-    ],
-    "answer": "Hyper Text Markup Language",
-    "explanation": "HTML stands for Hyper Text Markup Language. It is the standard markup language used to create and structure content on web pages."
-  },
-  {
-    "paperId": 2,
-    "question": "What is the primary purpose of HTML in web development?",
-    "options": [
-      "Adding animations",
-      "Adding structure to webpages",
-      "Adding styling",
-      "Adding database connections"
-    ],
-    "answer": "Adding structure to webpages",
-    "explanation": "HTML's primary purpose is to add structure to webpages. It defines the layout and organization of content using elements like headings, paragraphs, lists, and sections."
-  },
-  {
-    "paperId": 2,
+    "PaperId": 1,
     "question": "What does CSS stand for?",
     "options": [
       "Computer Style Sheets",
       "Cascading Style Sheets",
-      "Creative Styling System",
-      "Colorful Style Sheets"
+      "Creative System Styles",
+      "Colorful Style System"
     ],
     "answer": "Cascading Style Sheets",
-    "explanation": "CSS stands for Cascading Style Sheets. It is used to describe how HTML elements should be displayed on screen."
+    "explanation": "CSS stands for Cascading Style Sheets. It is the language used to style HTML documents."
   },
   {
-    "paperId": 2,
-    "question": "What is the main function of CSS?",
+    "PaperId": 1,
+    "question": "What is CSS used for?",
     "options": [
-      "Adding functionality",
-      "Adding structure",
-      "Adding styling",
-      "Adding logic"
+      "Creating databases",
+      "Styling HTML documents",
+      "Writing server code",
+      "Managing files"
     ],
-    "answer": "Adding styling",
-    "explanation": "CSS is primarily used for adding styling to webpages. It controls colors, fonts, layouts, spacing, and the overall visual appearance of web content."
+    "answer": "Styling HTML documents",
+    "explanation": "CSS is the language we use to style an HTML document. It describes how HTML elements should be displayed."
   },
   {
-    "paperId": 2,
-    "question": "What does JavaScript add to a webpage?",
+    "PaperId": 1,
+    "question": "What are the two main parts of a CSS rule?",
     "options": [
-      "Structure only",
-      "Styling only",
-      "Functionality and logic",
-      "Images only"
+      "Header and footer",
+      "Selector and declaration block",
+      "Name and value",
+      "Start and end"
     ],
-    "answer": "Functionality and logic",
-    "explanation": "JavaScript adds functionality and logic to webpages. It enables interactive features, dynamic content updates, form validation, and much more."
+    "answer": "Selector and declaration block",
+    "explanation": "The CSS syntax consists of a selector and a declaration block. The selector points to the element to style, and the declaration block contains the styles."
   },
   {
-    "paperId": 2,
-    "question": "What is a website?",
+    "PaperId": 1,
+    "question": "What does a CSS selector do?",
     "options": [
-      "A single image on the internet",
-      "A collection of webpages used to share information, services or products",
-      "A type of software",
-      "A programming language"
+      "Adds content to the page",
+      "Points to the HTML element you want to style",
+      "Creates new HTML elements",
+      "Deletes HTML elements"
     ],
-    "answer": "A collection of webpages used to share information, services or products",
-    "explanation": "A website is a collection of webpages used to share information, services, or products to online users. It consists of multiple interconnected pages accessible via the internet."
+    "answer": "Points to the HTML element you want to style",
+    "explanation": "The selector points to the HTML element you want to style. It tells CSS which element(s) the styles should be applied to."
   },
   {
-    "paperId": 2,
-    "question": "Which of the following is an example of an e-commerce website?",
-    "options": ["Facebook", "YouTube", "Temu", "Wikipedia"],
-    "answer": "Temu",
-    "explanation": "Temu is an e-commerce website because it allows users to buy and sell products online. E-commerce sites are specifically designed for online commercial transactions."
-  },
-  {
-    "paperId": 2,
-    "question": "What is web development?",
+    "PaperId": 1,
+    "question": "What does a CSS declaration block contain?",
     "options": [
-      "The act of drawing logos",
-      "The act of building a website",
-      "The act of writing articles",
-      "The act of taking photos"
+      "HTML tags",
+      "One or more style declarations",
+      "JavaScript code",
+      "Image files"
     ],
-    "answer": "The act of building a website",
-    "explanation": "Web development is the act of building a website. It involves writing code, creating functionality, and assembling all the components that make a website work."
+    "answer": "One or more style declarations",
+    "explanation": "The declaration block contains one or more declarations separated by semicolons. These are the styles to apply to the selected element."
   },
   {
-    "paperId": 2,
-    "question": "Who is a web developer?",
+    "PaperId": 1,
+    "question": "What separates multiple CSS declarations within a declaration block?",
+    "options": ["Commas", "Semicolons", "Periods", "Colons"],
+    "answer": "Semicolons",
+    "explanation": "Multiple declarations in a CSS declaration block are separated by semicolons (;)."
+  },
+  {
+    "PaperId": 1,
+    "question": "What is the correct pattern for a CSS style declaration?",
     "options": [
-      "A person who writes news articles",
-      "A person who builds websites",
-      "A person who designs logos",
-      "A person who manages social media"
+      "value: property;",
+      "property: value;",
+      "property = value;",
+      "value = property;"
     ],
-    "answer": "A person who builds websites",
-    "explanation": "A web developer is a person who builds websites. They use programming languages and various tools to create functional, interactive web applications."
+    "answer": "property: value;",
+    "explanation": "CSS style declarations follow the pattern 'property: value;' where the property is what you want to style and the value is how you want to style it."
   },
   {
-    "paperId": 2,
-    "question": "What does frontend development involve?",
+    "PaperId": 1,
+    "question": "What symbols are used to create a CSS declaration block?",
     "options": [
-      "Managing databases",
-      "Creating graphical user interfaces",
-      "Setting up servers",
-      "Network configuration"
+      "Square brackets []",
+      "Parentheses ()",
+      "Curly braces {}",
+      "Angle brackets <>"
     ],
-    "answer": "Creating graphical user interfaces",
-    "explanation": "Frontend development involves creating the graphical user interfaces of webpages, including input forms, buttons, images, and hyperlinks that users can interact with."
+    "answer": "Curly braces {}",
+    "explanation": "CSS declaration blocks are created using opening and closing curly braces {}. The style declarations go between these braces."
   },
   {
-    "paperId": 2,
-    "question": "Which technologies make up the frontend development stack?",
+    "PaperId": 1,
+    "question": "In the CSS rule 'div { background-color: tan; }', what is 'div'?",
+    "options": ["A property", "A value", "A selector", "A declaration"],
+    "answer": "A selector",
+    "explanation": "'div' is the selector that points to all <div> HTML elements. The styles in the declaration block will be applied to all div elements."
+  },
+  {
+    "PaperId": 1,
+    "question": "In 'background-color: tan;', what is 'background-color'?",
+    "options": ["A selector", "A property", "A value", "An HTML tag"],
+    "answer": "A property",
+    "explanation": "'background-color' is a CSS property that specifies what aspect of the element you want to style (in this case, the background color)."
+  },
+  {
+    "PaperId": 1,
+    "question": "In 'background-color: tan;', what is 'tan'?",
+    "options": ["A selector", "A property", "A value", "An HTML element"],
+    "answer": "A value",
+    "explanation": "'tan' is the value assigned to the background-color property. It specifies how the property should be styled."
+  },
+  {
+    "PaperId": 1,
+    "question": "What does the 'padding' property do in CSS?",
     "options": [
-      "Python, Java, C++",
-      "HTML, CSS, JavaScript",
-      "PHP, MySQL, Apache",
-      "Ruby, Rails, PostgreSQL"
+      "Changes text color",
+      "Creates space inside an element around its content",
+      "Changes background color",
+      "Changes font size"
     ],
-    "answer": "HTML, CSS, JavaScript",
-    "explanation": "The frontend development stack consists of HTML, CSS, and JavaScript. HTML provides structure, CSS provides styling, and JavaScript provides functionality."
+    "answer": "Creates space inside an element around its content",
+    "explanation": "The padding property creates space inside an element, between the content and the element's border."
   },
   {
-    "paperId": 2,
-    "question": "What type of website is YouTube classified as?",
+    "PaperId": 1,
+    "question": "What does 'padding: 10px;' mean?",
     "options": [
-      "E-commerce",
-      "Social media",
-      "Video sharing website",
-      "Fin-tech"
+      "10 pixels of padding on all sides",
+      "10 pixels of margin",
+      "10 pixels of border",
+      "10 pixels of width"
     ],
-    "answer": "Video sharing website",
-    "explanation": "YouTube is classified as a video sharing website because its primary purpose is to allow users to upload, share, and view video content."
+    "answer": "10 pixels of padding on all sides",
+    "explanation": "When a single value is given to padding, it applies 10 pixels of padding to all four sides (top, right, bottom, left) of the element."
   },
   {
-    "paperId": 2,
-    "question": "Which HTML tag is used to create a button?",
-    "options": ["<h1>", "<button>", "<ul>", "<link>"],
-    "answer": "<button>",
-    "explanation": "The <button> tag is used to create buttons in HTML."
-  },
-  {
-    "paperId": 2,
-    "question": "What does web design entail?",
+    "PaperId": 1,
+    "question": "What does the 'width' property do?",
     "options": [
-      "Only writing code",
-      "Planning, designing, and organizing a website's content and layout",
-      "Only testing websites",
-      "Only managing servers"
+      "Sets the height of an element",
+      "Sets the horizontal size of an element",
+      "Sets the font size",
+      "Sets the border thickness"
     ],
-    "answer": "Planning, designing, and organizing a website's content and layout",
-    "explanation": "Web design entails planning, designing, and organizing a website's content, layout, and aesthetic aspects, as well as ensuring functionality, usability, and accessibility."
+    "answer": "Sets the horizontal size of an element",
+    "explanation": "The width property sets the horizontal size (width) of an element. In the example, 'width: 600px;' makes the div 600 pixels wide."
   },
   {
-    "paperId": 2,
-    "question": "Which HTML tag is used to define the largest heading?",
-    "options": ["<button>", "<ul>", "<h1>", "<img>"],
-    "answer": "<h1>",
-    "explanation": "The <h1> tag is used to define the largest and most important heading in HTML. Heading tags range from <h1> (largest) to <h6> (smallest)."
+    "PaperId": 1,
+    "question": "What does the 'color' property control in CSS?",
+    "options": ["Background color", "Border color", "Text color", "All colors"],
+    "answer": "Text color",
+    "explanation": "The color property controls the color of the text within an element. In the example, 'color: brown;' makes the h2 text brown."
   },
   {
-    "paperId": 2,
-    "question": "What is fin-tech?",
+    "PaperId": 1,
+    "question": "In 'padding: 10px 20px;', what do these two values represent?",
     "options": [
-      "A type of video website",
-      "A financial technology website",
-      "A social media platform",
-      "An educational website"
+      "Width and height",
+      "Top/bottom padding and left/right padding",
+      "Left and right padding only",
+      "Border and margin"
     ],
-    "answer": "A financial technology website",
-    "explanation": "Fin-tech refers to financial technology websites and applications that provide financial services online, such as banking apps, payment platforms, and investment tools."
+    "answer": "Top/bottom padding and left/right padding",
+    "explanation": "When two values are given to padding, the first (10px) applies to top and bottom, while the second (20px) applies to left and right."
   },
   {
-    "paperId": 2,
-    "question": "Which HTML tag is used to create a paragraph?",
-    "options": ["<h1>", "<p>", "<h5>", "<ol>"],
-    "answer": "<p>",
-    "explanation": "The <p> tag is used to create paragraphs in HTML. It defines a block of text that is separated from other content with space above and below."
-  },
-  {
-    "paperId": 2,
-    "question": "What is edu-tech?",
+    "PaperId": 1,
+    "question": "What does 'border: none;' do?",
     "options": [
-      "Entertainment technology",
-      "Educational technology websites",
-      "Electronic commerce",
-      "Email technology"
+      "Creates a thick border",
+      "Removes the border from an element",
+      "Makes the border invisible but present",
+      "Changes border color"
     ],
-    "answer": "Educational technology websites",
-    "explanation": "Edu-tech refers to educational technology websites and platforms that provide learning resources, online courses, and educational tools."
+    "answer": "Removes the border from an element",
+    "explanation": "'border: none;' removes any border from the element. In the example, it removes the default border from the button."
   },
   {
-    "paperId": 2,
-    "question": "Which HTML tag is used to insert an image?",
-    "options": ["<li>", "<ol>", "<img>", "<photo>"],
-    "answer": "<img>",
-    "explanation": "The <img> tag is used to insert images in HTML. It requires the src attribute to specify the image source and alt attribute for accessibility."
+    "PaperId": 1,
+    "question": "What type of website is Audiomack?",
+    "options": ["E-commerce", "Portfolio", "SaaS", "Static school website"],
+    "answer": "SaaS",
+    "explanation": "Audiomack is a SaaS (Software as a Service) website that provides music streaming and sharing services."
   },
   {
-    "paperId": 2,
-    "question": "What elements can users interact with on a frontend interface?",
+    "PaperId": 1,
+    "question": "What is the correct CSS syntax structure?",
     "options": [
-      "Databases and servers",
-      "Input forms, buttons, images, and hyperlinks",
-      "Backend code only",
-      "Network protocols"
+      "value { property: selector; }",
+      "selector { property: value; }",
+      "property { selector: value; }",
+      "declaration { selector: property; }"
     ],
-    "answer": "Input forms, buttons, images, and hyperlinks",
-    "explanation": "Users can interact with input forms, buttons, images, and hyperlinks on a frontend interface. These are the visual and interactive elements created by frontend developers."
+    "answer": "selector { property: value; }",
+    "explanation": "The correct CSS syntax is: selector followed by curly braces containing property: value declarations."
   },
   {
-    "paperId": 2,
-    "question": "Which HTML tag is used to create a line break?",
-    "options": ["<style>", "<h6>", "<br>", "<button>"],
-    "answer": "<br>",
-    "explanation": "The <br> tag is used to create a line break in HTML. It is a self-closing tag that moves content to a new line without starting a new paragraph."
+    "PaperId": 1,
+    "question": "What do static school websites primarily share?",
+    "options": ["Products", "Services", "Information", "Games"],
+    "answer": "Information",
+    "explanation": "Static school websites like sunshineschools.sch.ng primarily share information about the school, programs, and activities."
   },
   {
-    "paperId": 2,
-    "question": "What is the correct HTML tag for creating an unordered list?",
-    "options": ["<ol>", "<list>", "<ul>", "<li>"],
-    "answer": "<ul>",
-    "explanation": "The <ul> tag is used to create an unordered (bulleted) list in HTML. List items within it are defined using the <li> tag."
-  },
-  {
-    "paperId": 2,
-    "question": "What are the different kinds of list we have in HTML",
+    "PaperId": 1,
+    "question": "How can you style multiple HTML elements with the same CSS?",
     "options": [
-      "Long and short list",
-      "Ordered and Unordered list",
-      "Micro and Mini list",
-      "None of the above"
+      "Write separate CSS for each element",
+      "Use the same selector for all elements",
+      "You cannot style multiple elements",
+      "Use different property names"
     ],
-    "answer": "Ordered and Unordered list",
-    "explanation": "Ordered list are displayed on the browser with numbering while Unordered list are displayed on the browser with dots"
+    "answer": "Use the same selector for all elements",
+    "explanation": "By using a selector that targets multiple elements (like 'button' for all buttons), you can apply the same styles to all matching elements at once."
   },
   {
-    "paperId": 2,
-    "question": "What is the correct HTML tag for adding css internally in HTML?",
-    "options": ["<img>", "<style>", "<link>", "<h4>"],
+    "PaperId": 1,
+    "question": "Which HTML tag do should you place your CSS code in?",
+    "options": ["<button>", "<style>", "<h1>", "<div>"],
     "answer": "<style>",
-    "explanation": "The <style> tag is used to add css styling internally to your HTML file"
+    "explanation": "Internal CSS codes are placed in-between the <style></style> tag"
+  },
+
+  {
+    "paperId": 2,
+    "question": "What is programming?",
+    "options": [
+      "The process of using a computer",
+      "The process of writing instructions in a specific language for a computer to perform tasks",
+      "The process of browsing the internet",
+      "The process of playing games"
+    ],
+    "answer": "The process of writing instructions in a specific language for a computer to perform tasks",
+    "explanation": "Programming is the process of writing instructions (code) in a specific language for a computer to perform specific tasks or solve a specific problem."
+  },
+  {
+    "paperId": 2,
+    "question": "Which of the following can you build using programming?",
+    "options": [
+      "Only games",
+      "Only websites",
+      "Softwares, games, robots and smart machines",
+      "Only mobile apps"
+    ],
+    "answer": "Softwares, games, robots and smart machines",
+    "explanation": "You can use programming to build software and applications, create games and animations, and build robots and smart machines."
+  },
+  {
+    "paperId": 2,
+    "question": "Which of these is an example of software built using programming?",
+    "options": ["A pencil", "A calculator app", "A notebook", "A desk"],
+    "answer": "A calculator app",
+    "explanation": "A calculator app is software built using programming to solve the problem of performing mathematical calculations."
+  },
+  {
+    "paperId": 2,
+    "question": "What is syntax in programming?",
+    "options": [
+      "A type of computer",
+      "The set of rules that defines how code must be written",
+      "A programming language",
+      "A type of software"
+    ],
+    "answer": "The set of rules that defines how code must be written",
+    "explanation": "Syntax is the set of rules that defines how code must be written in a programming language, similar to grammar rules in human languages."
+  },
+  {
+    "paperId": 2,
+    "question": "How does Scratch enforce syntax rules?",
+    "options": [
+      "Using text warnings",
+      "Using block shapes",
+      "Using error messages only",
+      "Using colors only"
+    ],
+    "answer": "Using block shapes",
+    "explanation": "Scratch uses block shapes to enforce syntax. Different shaped blocks fit together in specific ways, preventing syntax errors."
+  },
+  {
+    "paperId": 2,
+    "question": "In what order do code blocks run in Scratch?",
+    "options": [
+      "From bottom to top",
+      "From top to bottom",
+      "Randomly",
+      "From right to left"
+    ],
+    "answer": "From top to bottom",
+    "explanation": "Code blocks in Scratch run from top to bottom, executing each instruction in sequence unless told otherwise."
+  },
+  {
+    "paperId": 2,
+    "question": "What must Scratch scripts start with?",
+    "options": [
+      "A loop block",
+      "An event block",
+      "A variable block",
+      "A motion block"
+    ],
+    "answer": "An event block",
+    "explanation": "In Scratch, scripts must start with an event block, such as 'when green flag clicked', to trigger the program."
+  },
+  {
+    "paperId": 2,
+    "question": "What is sequence in programming?",
+    "options": [
+      "The color of code blocks",
+      "The order in which instructions are executed",
+      "The speed of the program",
+      "The size of the program"
+    ],
+    "answer": "The order in which instructions are executed",
+    "explanation": "Sequence refers to the order in which instructions are executed. Programs run line by line, from top to bottom, unless told otherwise."
+  },
+  {
+    "paperId": 2,
+    "question": "If you stack: 'say Hello' → 'move 10 steps' → 'play sound meow', what happens first?",
+    "options": [
+      "The sprite moves",
+      "The sprite says Hello",
+      "The sprite plays meow",
+      "All happen at once"
+    ],
+    "answer": "The sprite says Hello",
+    "explanation": "Due to sequence, the sprite will execute commands in order from top to bottom, so it says Hello first, then moves, then plays the sound."
+  },
+  {
+    "paperId": 2,
+    "question": "What do loops allow you to do in programming?",
+    "options": [
+      "Delete code",
+      "Repeat actions multiple times without rewriting code",
+      "Change colors",
+      "Stop the program"
+    ],
+    "answer": "Repeat actions multiple times without rewriting code",
+    "explanation": "Loops let you repeat actions multiple times without rewriting code. Instead of writing the same instruction ten times, you can use a loop."
+  },
+  {
+    "paperId": 2,
+    "question": "Instead of writing 'say Hello' ten times, what can you use?",
+    "options": [
+      "A variable",
+      "A conditional",
+      "A loop that runs ten times",
+      "An event"
+    ],
+    "answer": "A loop that runs ten times",
+    "explanation": "You can use a loop that runs ten times instead of writing the same code ten times. This is more efficient and easier to maintain."
+  },
+  {
+    "paperId": 2,
+    "question": "What do conditionals allow programs to do?",
+    "options": [
+      "Repeat code",
+      "Make decisions and take different paths based on conditions",
+      "Store information",
+      "Change colors"
+    ],
+    "answer": "Make decisions and take different paths based on conditions",
+    "explanation": "Conditionals allow programs to make decisions and take different paths based on conditions, enabling programs to respond differently to different situations."
+  },
+  {
+    "paperId": 2,
+    "question": "What are the most common conditional blocks in Scratch?",
+    "options": [
+      "repeat and forever",
+      "if and if-else",
+      "when and wait",
+      "move and turn"
+    ],
+    "answer": "if and if-else",
+    "explanation": "The most common conditional blocks in Scratch are the 'if' and 'if-else' blocks, which allow the program to make decisions."
+  },
+  {
+    "paperId": 2,
+    "question": "In the conditional 'if <key space pressed?> then jump, else walk', what happens when space is NOT pressed?",
+    "options": [
+      "The sprite jumps",
+      "The sprite walks",
+      "The sprite stops",
+      "Nothing happens"
+    ],
+    "answer": "The sprite walks",
+    "explanation": "In an if-else conditional, if the condition is false (space is NOT pressed), the 'else' part executes, so the sprite walks."
+  },
+  {
+    "paperId": 2,
+    "question": "What is a variable in programming?",
+    "options": [
+      "A type of loop",
+      "A labeled container that holds a value",
+      "A sound effect",
+      "A background image"
+    ],
+    "answer": "A labeled container that holds a value",
+    "explanation": "A variable is like a labeled container that holds a value. It allows programs to store and work with information."
+  },
+  {
+    "paperId": 2,
+    "question": "What can you do with variables in a program?",
+    "options": [
+      "Only create them",
+      "Store information, change it, and use it throughout the program",
+      "Only delete them",
+      "Only display them"
+    ],
+    "answer": "Store information, change it, and use it throughout the program",
+    "explanation": "Variables let you save information, change it, and use it throughout your program, making programs dynamic and interactive."
+  },
+  {
+    "paperId": 2,
+    "question": "If you create a variable called 'score', what command might you use at the start of a game?",
+    "options": ["delete score", "set score to 0", "hide score", "loop score"],
+    "answer": "set score to 0",
+    "explanation": "At the start of a game, you would typically 'set score to 0' to initialize the score variable to a starting value."
+  },
+  {
+    "paperId": 2,
+    "question": "How would you increase a score by 1 point in Scratch?",
+    "options": [
+      "vanish score to 1",
+      "change score by 1",
+      "delete score",
+      "create score"
+    ],
+    "answer": "change score by 1",
+    "explanation": "The 'change score by 1' command increases the current value of the score variable by 1, adding to the existing value."
+  },
+  {
+    "paperId": 2,
+    "question": "What are events in programming?",
+    "options": [
+      "Types of loops",
+      "Actions or occurrences that happen during program execution",
+      "Types of variables",
+      "Background images"
+    ],
+    "answer": "Actions or occurrences that happen during program execution",
+    "explanation": "Events are actions or occurrences that happen during program execution, often triggered by users or the system."
+  },
+  {
+    "paperId": 2,
+    "question": "Which of these is an example of an event?",
+    "options": [
+      "A variable being created",
+      "A user clicking a button",
+      "A loop repeating",
+      "Code running from top to bottom"
+    ],
+    "answer": "A user clicking a button",
+    "explanation": "A user clicking a button is an event. Events can be triggered by user actions like clicks, key presses, or system actions like timers."
+  },
+  {
+    "paperId": 2,
+    "question": "What does it mean when a program 'listens' for events?",
+    "options": [
+      "It plays sounds",
+      "It waits and responds to specific actions or occurrences",
+      "It repeats code",
+      "It stores data"
+    ],
+    "answer": "It waits and responds to specific actions or occurrences",
+    "explanation": "When a program 'listens' for events, it waits for specific actions to happen and then responds accordingly."
+  },
+  {
+    "paperId": 2,
+    "question": "What benefit do you get from creating your own games and animations?",
+    "options": [
+      "You can only play games",
+      "You become a creator and not just a user",
+      "You can only watch animations",
+      "You delete other games"
+    ],
+    "answer": "You become a creator and not just a user",
+    "explanation": "By creating your own games and animations through programming, you become a creator and not just a user of technology."
+  },
+  {
+    "paperId": 2,
+    "question": "Which programming concept would you use to make a character respond differently to different keyboard presses?",
+    "options": ["Loops", "Conditionals", "Variables only", "Sequence only"],
+    "answer": "Conditionals",
+    "explanation": "Conditionals allow you to check which key is pressed and make the character respond differently based on the condition."
+  },
+  {
+    "paperId": 2,
+    "question": "Why do different programming languages have different syntax?",
+    "options": [
+      "To confuse programmers",
+      "Because each language has its own set of rules and structure",
+      "They all have the same syntax",
+      "To make programming harder"
+    ],
+    "answer": "Because each language has its own set of rules and structure",
+    "explanation": "Different programming languages have different syntax because each language was designed with its own set of rules and structure for writing code."
+  },
+  {
+    "paperId": 2,
+    "question": "What type of application uses programming to tell you weather conditions?",
+    "options": [
+      "A calculator app",
+      "A weather app",
+      "An alarm clock app",
+      "A messaging app"
+    ],
+    "answer": "A weather app",
+    "explanation": "A weather app is software built using programming that solves the problem of providing weather information to users."
+  },
+  {
+    "paperId": 2,
+    "question": "What makes the physical stacking of blocks in Scratch helpful?",
+    "options": [
+      "It makes programs run faster",
+      "It makes the sequence very clear",
+      "It uses less memory",
+      "It changes colors"
+    ],
+    "answer": "It makes the sequence very clear",
+    "explanation": "The physical stacking of blocks in Scratch makes the sequence (order of execution) very clear and easy to understand visually."
+  },
+  {
+    "paperId": 2,
+    "question": "Which programming concept would you use to keep track of a player's lives in a game?",
+    "options": ["An event", "A loop", "A variable", "A conditional only"],
+    "answer": "A variable",
+    "explanation": "A variable is perfect for keeping track of changing information like a player's lives, score, or health in a game."
+  },
+  {
+    "paperId": 2,
+    "question": "What is WhatsApp an example of?",
+    "options": [
+      "A game",
+      "A messaging app built with programming",
+      "A calculator",
+      "A robot"
+    ],
+    "answer": "A messaging app built with programming",
+    "explanation": "WhatsApp is a messaging app that was built using programming to solve the problem of communication between people."
+  },
+  {
+    "paperId": 2,
+    "question": "If a program runs 'line by line from top to bottom unless told otherwise', what tells it otherwise?",
+    "options": [
+      "Colors",
+      "Conditionals and loops",
+      "Variables only",
+      "Comments"
+    ],
+    "answer": "Conditionals and loops",
+    "explanation": "Conditionals and loops change the normal top-to-bottom flow. Conditionals make decisions about which path to take, and loops repeat sections of code."
+  },
+  {
+    "paperId": 2,
+    "question": "What is the purpose of an alarm clock app built with programming?",
+    "options": [
+      "To play games",
+      "To solve the problem of waking up at a specific time",
+      "To send messages",
+      "To calculate numbers"
+    ],
+    "answer": "To solve the problem of waking up at a specific time",
+    "explanation": "An alarm clock app is software built using programming to solve the specific problem of alerting users at a designated time."
   }
 ]
