@@ -5,6 +5,7 @@ import Login from "../pages/Login";
 import Quiz from "../pages/Quiz";
 import Admin from "../pages/Admin";
 import ErrorPage from "../pages/ErrorPage";
+import SuperAdmin from "../pages/SuperAdmin";
 // import RoutesAuth from "./RoutesAuth";
 // import Layout from "../components/dashboard/Layout";
 
@@ -45,6 +46,7 @@ const Routes = () => {
         { path: "/login", element: <Login /> },
         { path: "/start-quiz", element: <Quiz /> },
         { path: "/admin", element: <Admin /> },
+        { path: "/super-admin", element: <SuperAdmin /> },
       ],
       errorElement: <ErrorPage />,
     },

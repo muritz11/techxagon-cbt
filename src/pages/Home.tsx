@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom";
 import {
   QUESTION_LENGTH,
   QUESTION_WEIGHT,
@@ -6,6 +6,7 @@ import {
 } from "../utils/types";
 
 function Home() {
+  const navigate = useNavigate();
   const minutes = Math.floor(QUIZ_DURATION / 60);
 
   return (
@@ -34,7 +35,12 @@ function Home() {
         </div>
 
         <div className="my-4">
-          <h3 className="text-lg font-semibold">📖 Rules</h3>
+          <h3
+            className="text-lg font-semibold"
+            onClick={() => navigate("/super-admin")}
+          >
+            📖 Rules
+          </h3>
           <ul>
             <li>Do not refresh or close your browser during the test.</li>
             <li>Only one attempt is allowed.</li>
@@ -65,4 +71,4 @@ function Home() {
   );
 }
 
-export default Home
+export default Home;

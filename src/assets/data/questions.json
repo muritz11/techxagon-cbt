@@ -1,6 +1,6 @@
 [
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What is web development?",
     "options": [
       "Only creating logos",
@@ -12,7 +12,7 @@
     "explanation": "Web development is the comprehensive process of creating, building, and maintaining websites and web applications that run online."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What is a website?",
     "options": [
       "A single image on the internet",
@@ -24,7 +24,7 @@
     "explanation": "A website is a collection of webpages used to share information, services, or products to online users."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What type of website is Temu.com?",
     "options": [
       "E-commerce website",
@@ -36,14 +36,14 @@
     "explanation": "Temu.com is an e-commerce website used to share and sell products online."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What type of website is Jumia.com.ng?",
     "options": ["Portfolio", "E-commerce", "Social media", "Educational"],
     "answer": "E-commerce",
     "explanation": "Jumia.com.ng is an e-commerce website that shares and sells products to online users."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What is a portfolio website primarily used for?",
     "options": [
       "Selling products",
@@ -55,7 +55,7 @@
     "explanation": "A portfolio website like thetechsteph.netlify.app is used to share information about a person's work, projects, and skills."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What does SaaS stand for?",
     "options": [
       "Software as a Service",
@@ -67,21 +67,21 @@
     "explanation": "SaaS stands for Software as a Service, referring to software delivered over the internet as a service rather than installed locally."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What type of website is Netflix?",
     "options": ["E-commerce", "Portfolio", "SaaS", "Static website"],
     "answer": "SaaS",
     "explanation": "Netflix is a SaaS (Software as a Service) website that provides streaming services to users online."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What does Spotify primarily share with users?",
     "options": ["Products", "Information", "Service", "Static content only"],
     "answer": "Service",
     "explanation": "Spotify is a SaaS platform that shares music streaming services with users."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What does CSS stand for?",
     "options": [
       "Computer Style Sheets",
@@ -93,7 +93,7 @@
     "explanation": "CSS stands for Cascading Style Sheets. It is the language used to style HTML documents."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What is CSS used for?",
     "options": [
       "Creating databases",
@@ -105,7 +105,7 @@
     "explanation": "CSS is the language we use to style an HTML document. It describes how HTML elements should be displayed."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What are the two main parts of a CSS rule?",
     "options": [
       "Header and footer",
@@ -117,7 +117,7 @@
     "explanation": "The CSS syntax consists of a selector and a declaration block. The selector points to the element to style, and the declaration block contains the styles."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What does a CSS selector do?",
     "options": [
       "Adds content to the page",
@@ -129,7 +129,7 @@
     "explanation": "The selector points to the HTML element you want to style. It tells CSS which element(s) the styles should be applied to."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What does a CSS declaration block contain?",
     "options": [
       "HTML tags",
@@ -141,14 +141,14 @@
     "explanation": "The declaration block contains one or more declarations separated by semicolons. These are the styles to apply to the selected element."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What separates multiple CSS declarations within a declaration block?",
     "options": ["Commas", "Semicolons", "Periods", "Colons"],
     "answer": "Semicolons",
     "explanation": "Multiple declarations in a CSS declaration block are separated by semicolons (;)."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What is the correct pattern for a CSS style declaration?",
     "options": [
       "value: property;",
@@ -160,7 +160,7 @@
     "explanation": "CSS style declarations follow the pattern 'property: value;' where the property is what you want to style and the value is how you want to style it."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What symbols are used to create a CSS declaration block?",
     "options": [
       "Square brackets []",
@@ -172,28 +172,28 @@
     "explanation": "CSS declaration blocks are created using opening and closing curly braces {}. The style declarations go between these braces."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "In the CSS rule 'div { background-color: tan; }', what is 'div'?",
     "options": ["A property", "A value", "A selector", "A declaration"],
     "answer": "A selector",
     "explanation": "'div' is the selector that points to all <div> HTML elements. The styles in the declaration block will be applied to all div elements."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "In 'background-color: tan;', what is 'background-color'?",
     "options": ["A selector", "A property", "A value", "An HTML tag"],
     "answer": "A property",
     "explanation": "'background-color' is a CSS property that specifies what aspect of the element you want to style (in this case, the background color)."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "In 'background-color: tan;', what is 'tan'?",
     "options": ["A selector", "A property", "A value", "An HTML element"],
     "answer": "A value",
     "explanation": "'tan' is the value assigned to the background-color property. It specifies how the property should be styled."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What does the 'padding' property do in CSS?",
     "options": [
       "Changes text color",
@@ -205,19 +205,19 @@
     "explanation": "The padding property creates space inside an element, between the content and the element's border."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What does 'padding: 10px;' mean?",
     "options": [
-      "10 pixels of padding on all sides",
+      "10 pixels of padding space on all sides",
       "10 pixels of margin",
       "10 pixels of border",
       "10 pixels of width"
     ],
-    "answer": "10 pixels of padding on all sides",
+    "answer": "10 pixels of padding space on all sides",
     "explanation": "When a single value is given to padding, it applies 10 pixels of padding to all four sides (top, right, bottom, left) of the element."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What does the 'width' property do?",
     "options": [
       "Sets the height of an element",
@@ -229,14 +229,14 @@
     "explanation": "The width property sets the horizontal size (width) of an element. In the example, 'width: 600px;' makes the div 600 pixels wide."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What does the 'color' property control in CSS?",
     "options": ["Background color", "Border color", "Text color", "All colors"],
     "answer": "Text color",
     "explanation": "The color property controls the color of the text within an element. In the example, 'color: brown;' makes the h2 text brown."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "In 'padding: 10px 20px;', what do these two values represent?",
     "options": [
       "Width and height",
@@ -248,7 +248,7 @@
     "explanation": "When two values are given to padding, the first (10px) applies to top and bottom, while the second (20px) applies to left and right."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What does 'border: none;' do?",
     "options": [
       "Creates a thick border",
@@ -260,14 +260,14 @@
     "explanation": "'border: none;' removes any border from the element. In the example, it removes the default border from the button."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What type of website is Audiomack?",
     "options": ["E-commerce", "Portfolio", "SaaS", "Static school website"],
     "answer": "SaaS",
     "explanation": "Audiomack is a SaaS (Software as a Service) website that provides music streaming and sharing services."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What is the correct CSS syntax structure?",
     "options": [
       "value { property: selector; }",
@@ -279,14 +279,14 @@
     "explanation": "The correct CSS syntax is: selector followed by curly braces containing property: value declarations."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "What do static school websites primarily share?",
     "options": ["Products", "Services", "Information", "Games"],
     "answer": "Information",
     "explanation": "Static school websites like sunshineschools.sch.ng primarily share information about the school, programs, and activities."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "How can you style multiple HTML elements with the same CSS?",
     "options": [
       "Write separate CSS for each element",
@@ -298,7 +298,7 @@
     "explanation": "By using a selector that targets multiple elements (like 'button' for all buttons), you can apply the same styles to all matching elements at once."
   },
   {
-    "PaperId": 1,
+    "paperId": 2,
     "question": "Which HTML tag do should you place your CSS code in?",
     "options": ["<button>", "<style>", "<h1>", "<div>"],
     "answer": "<style>",
@@ -306,7 +306,7 @@
   },
 
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "What is programming?",
     "options": [
       "The process of using a computer",
@@ -318,7 +318,7 @@
     "explanation": "Programming is the process of writing instructions (code) in a specific language for a computer to perform specific tasks or solve a specific problem."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "Which of the following can you build using programming?",
     "options": [
       "Only games",
@@ -330,14 +330,14 @@
     "explanation": "You can use programming to build software and applications, create games and animations, and build robots and smart machines."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "Which of these is an example of software built using programming?",
     "options": ["A pencil", "A calculator app", "A notebook", "A desk"],
     "answer": "A calculator app",
     "explanation": "A calculator app is software built using programming to solve the problem of performing mathematical calculations."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "What is syntax in programming?",
     "options": [
       "A type of computer",
@@ -349,7 +349,7 @@
     "explanation": "Syntax is the set of rules that defines how code must be written in a programming language, similar to grammar rules in human languages."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "How does Scratch enforce syntax rules?",
     "options": [
       "Using text warnings",
@@ -361,7 +361,7 @@
     "explanation": "Scratch uses block shapes to enforce syntax. Different shaped blocks fit together in specific ways, preventing syntax errors."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "In what order do code blocks run in Scratch?",
     "options": [
       "From bottom to top",
@@ -373,7 +373,7 @@
     "explanation": "Code blocks in Scratch run from top to bottom, executing each instruction in sequence unless told otherwise."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "What must Scratch scripts start with?",
     "options": [
       "A loop block",
@@ -385,7 +385,7 @@
     "explanation": "In Scratch, scripts must start with an event block, such as 'when green flag clicked', to trigger the program."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "What is sequence in programming?",
     "options": [
       "The color of code blocks",
@@ -397,7 +397,7 @@
     "explanation": "Sequence refers to the order in which instructions are executed. Programs run line by line, from top to bottom, unless told otherwise."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "If you stack: 'say Hello' → 'move 10 steps' → 'play sound meow', what happens first?",
     "options": [
       "The sprite moves",
@@ -409,7 +409,7 @@
     "explanation": "Due to sequence, the sprite will execute commands in order from top to bottom, so it says Hello first, then moves, then plays the sound."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "What do loops allow you to do in programming?",
     "options": [
       "Delete code",
@@ -421,7 +421,7 @@
     "explanation": "Loops let you repeat actions multiple times without rewriting code. Instead of writing the same instruction ten times, you can use a loop."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "Instead of writing 'say Hello' ten times, what can you use?",
     "options": [
       "A variable",
@@ -433,7 +433,7 @@
     "explanation": "You can use a loop that runs ten times instead of writing the same code ten times. This is more efficient and easier to maintain."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "What do conditionals allow programs to do?",
     "options": [
       "Repeat code",
@@ -445,7 +445,7 @@
     "explanation": "Conditionals allow programs to make decisions and take different paths based on conditions, enabling programs to respond differently to different situations."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "What are the most common conditional blocks in Scratch?",
     "options": [
       "repeat and forever",
@@ -457,7 +457,7 @@
     "explanation": "The most common conditional blocks in Scratch are the 'if' and 'if-else' blocks, which allow the program to make decisions."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "In the conditional 'if <key space pressed?> then jump, else walk', what happens when space is NOT pressed?",
     "options": [
       "The sprite jumps",
@@ -469,7 +469,7 @@
     "explanation": "In an if-else conditional, if the condition is false (space is NOT pressed), the 'else' part executes, so the sprite walks."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "What is a variable in programming?",
     "options": [
       "A type of loop",
@@ -481,7 +481,7 @@
     "explanation": "A variable is like a labeled container that holds a value. It allows programs to store and work with information."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "What can you do with variables in a program?",
     "options": [
       "Only create them",
@@ -493,14 +493,14 @@
     "explanation": "Variables let you save information, change it, and use it throughout your program, making programs dynamic and interactive."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "If you create a variable called 'score', what command might you use at the start of a game?",
     "options": ["delete score", "set score to 0", "hide score", "loop score"],
     "answer": "set score to 0",
     "explanation": "At the start of a game, you would typically 'set score to 0' to initialize the score variable to a starting value."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "How would you increase a score by 1 point in Scratch?",
     "options": [
       "vanish score to 1",
@@ -512,7 +512,7 @@
     "explanation": "The 'change score by 1' command increases the current value of the score variable by 1, adding to the existing value."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "What are events in programming?",
     "options": [
       "Types of loops",
@@ -524,7 +524,7 @@
     "explanation": "Events are actions or occurrences that happen during program execution, often triggered by users or the system."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "Which of these is an example of an event?",
     "options": [
       "A variable being created",
@@ -536,7 +536,7 @@
     "explanation": "A user clicking a button is an event. Events can be triggered by user actions like clicks, key presses, or system actions like timers."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "What does it mean when a program 'listens' for events?",
     "options": [
       "It plays sounds",
@@ -548,7 +548,7 @@
     "explanation": "When a program 'listens' for events, it waits for specific actions to happen and then responds accordingly."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "What benefit do you get from creating your own games and animations?",
     "options": [
       "You can only play games",
@@ -560,14 +560,14 @@
     "explanation": "By creating your own games and animations through programming, you become a creator and not just a user of technology."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "Which programming concept would you use to make a character respond differently to different keyboard presses?",
     "options": ["Loops", "Conditionals", "Variables only", "Sequence only"],
     "answer": "Conditionals",
     "explanation": "Conditionals allow you to check which key is pressed and make the character respond differently based on the condition."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "Why do different programming languages have different syntax?",
     "options": [
       "To confuse programmers",
@@ -579,7 +579,7 @@
     "explanation": "Different programming languages have different syntax because each language was designed with its own set of rules and structure for writing code."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "What type of application uses programming to tell you weather conditions?",
     "options": [
       "A calculator app",
@@ -591,7 +591,7 @@
     "explanation": "A weather app is software built using programming that solves the problem of providing weather information to users."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "What makes the physical stacking of blocks in Scratch helpful?",
     "options": [
       "It makes programs run faster",
@@ -603,14 +603,14 @@
     "explanation": "The physical stacking of blocks in Scratch makes the sequence (order of execution) very clear and easy to understand visually."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "Which programming concept would you use to keep track of a player's lives in a game?",
     "options": ["An event", "A loop", "A variable", "A conditional only"],
     "answer": "A variable",
     "explanation": "A variable is perfect for keeping track of changing information like a player's lives, score, or health in a game."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "What is WhatsApp an example of?",
     "options": [
       "A game",
@@ -622,7 +622,7 @@
     "explanation": "WhatsApp is a messaging app that was built using programming to solve the problem of communication between people."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "If a program runs 'line by line from top to bottom unless told otherwise', what tells it otherwise?",
     "options": [
       "Colors",
@@ -634,7 +634,7 @@
     "explanation": "Conditionals and loops change the normal top-to-bottom flow. Conditionals make decisions about which path to take, and loops repeat sections of code."
   },
   {
-    "paperId": 2,
+    "paperId": 1,
     "question": "What is the purpose of an alarm clock app built with programming?",
     "options": [
       "To play games",

@@ -14,8 +14,8 @@ export interface QuizResultInterface {
   student: AuthStudentInterface | null;
   date: string;
   score: number;
-  totalQuesions: number;
-  quesionWeight: number;
+  totalQuestions: number;
+  questionWeight: number;
   selectedQuestions: QuestionInterface[];
   selectedAnswers: {
     [key: number]: string;
