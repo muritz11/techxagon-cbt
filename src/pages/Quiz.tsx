@@ -152,8 +152,8 @@ const Quiz = () => {
       student: student,
       date: new Date()?.toString(),
       score,
-      totalQuesions: QUESTION_LENGTH,
-      quesionWeight: QUESTION_WEIGHT,
+      totalQuestions: QUESTION_LENGTH,
+      questionWeight: QUESTION_WEIGHT,
       selectedQuestions,
       selectedAnswers,
     });

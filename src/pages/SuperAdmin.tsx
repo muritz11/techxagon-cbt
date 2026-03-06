@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import {
   Download,
   Eye,
@@ -11,15 +11,15 @@ import {
   FileText,
   Upload,
   Loader,
+  Search,
 } from "lucide-react";
 import type { QuizResultInterface } from "../utils/types";
 import StudentClasses from "../assets/data/classes.json";
 import { useNavigate } from "react-router-dom";
 const API_URL = import.meta.env.VITE_API_URL; // ← Vite uses import.meta.env not process.env
 
-const Admin = () => {
+const SuperAdmin = () => {
   const navigate = useNavigate();
-  const [isUploadResultLoading, setisUploadResultLoading] = useState(false);
   const [showClearPrompt, setShowClearPrompt] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState("");
@@ -28,23 +28,75 @@ const Admin = () => {
     useState<QuizResultInterface | null>(null);
   const [error, setError] = useState("");
 
-  useEffect(() => {
-    if (isAuthenticated) {
-      loadResults();
-    }
-  }, [isAuthenticated]);
+  const [selectedClass, setSelectedClass] = useState(
+    StudentClasses?.[0]?.value
+  );
+  const [searchInput, setSearchInput] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
+  // const [results, setResults] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-  const loadResults = () => {
+  const fetchResults = async (query = "", grade = "") => {
     try {
-      const stored = localStorage.getItem("results");
-      if (stored) {
-        const parsed = JSON.parse(stored) as QuizResultInterface[];
-        setResults(parsed);
-      }
-    } catch (err) {
-      console.error("Error loading results:", err);
+      setLoading(true);
+      const params = new URLSearchParams();
+      if (query) params.append("name", query);
+      if (grade) params.append("class", grade);
+
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/result/all?${params.toString()}`
+      );
+      const data = await response.json();
+
+      console.log("result fetch response", data);
+      if (!response.ok) alert(`result fetch failed: ${data?.message}`);
+      setResults(data.data);
+    } catch (error) {
+      console.log("fetch result failed: ", error);
+      alert("An error occurred fetching results");
+      // toast.error((error as Error).message);
+    } finally {
+      setLoading(false);
     }
   };
+
+  // fetch on mount
+  useEffect(() => {
+    fetchResults();
+  }, []);
+
+  // refetch when class dropdown changes
+  const handleClassChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedClass(e.target.value);
+    fetchResults(searchQuery, e.target.value);
+  };
+
+  // refetch when search is triggered
+  const handleSearch = () => {
+    setSearchQuery(searchInput);
+    fetchResults(searchInput, selectedClass);
+  };
+
+  // clear all filters
+  const handleClear = () => {
+    setSearchInput("");
+    setSearchQuery("");
+    fetchResults();
+  };
+
+  const filteredResults = useMemo(() => {
+    return results.filter((result) => {
+      const matchesClass = selectedClass
+        ? result.student?.class === selectedClass
+        : true;
+
+      const matchesSearch = searchQuery
+        ? result.student?.name.toLowerCase().includes(searchQuery.toLowerCase())
+        : true;
+
+      return matchesClass && matchesSearch;
+    });
+  }, [results, selectedClass, searchQuery]);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -134,35 +186,6 @@ const Admin = () => {
     return "text-red-600";
   };
 
-  const uploadResults = async () => {
-    try {
-      setisUploadResultLoading(true);
-      const response = await fetch(`${API_URL}/result/upload`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ result: results }),
-      });
-
-      const data = await response.json();
-
-      console.log("response", data);
-      setisUploadResultLoading(false);
-      if (!response.ok) {
-        // throw new Error(data.message || "Failed to upload results");
-        alert(`${data?.message || "Upload failed!"}`);
-        return;
-      }
-
-      alert(`${data?.message || "Upload successful"}`);
-    } catch (error) {
-      console.log("upload error: ", error);
-      setisUploadResultLoading(false);
-      alert(`${"Upload failed!!"}`);
-    }
-  };
-
   if (!isAuthenticated) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-700 flex items-center justify-center p-4">
@@ -173,10 +196,10 @@ const Admin = () => {
             </div>
           </div>
           <h1 className="text-3xl font-bold text-gray-800 mb-2 text-center">
-            Admin Login
+            Super Admin Login
           </h1>
           <p className="text-gray-600 text-center mb-6">
-            Enter password to access results
+            Enter password to access online results
           </p>
 
           <form onSubmit={handleLogin} className="space-y-4">
@@ -365,15 +388,7 @@ const Admin = () => {
             </button>
           </div>
 
-          {results.length === 0 ? (
-            <div className="text-center py-12">
-              <FileText className="mx-auto mb-4 text-gray-400" size={64} />
-              <p className="text-gray-600 text-lg">No quiz results found</p>
-              <p className="text-gray-500 text-sm mt-2">
-                Results will appear here once students complete quizzes
-              </p>
-            </div>
-          ) : (
+          {
             <>
               <div className="flex gap-3 mb-6">
                 <button
@@ -390,22 +405,53 @@ const Admin = () => {
                   <Download size={18} />
                   Download Summary (CSV)
                 </button>
-                <button
-                  onClick={uploadResults}
-                  className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
-                  disabled={isUploadResultLoading}
-                >
-                  {isUploadResultLoading ? <Loader /> : <Upload size={18} />}
-                  {isUploadResultLoading ? "Uploading..." : "Upload results"}
-                </button>
-                <button
-                  onClick={() => setShowClearPrompt(!showClearPrompt)}
-                  className="flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
-                >
-                  <X size={18} />
-                  Clear results
-                </button>
               </div>
+
+              {/* 👇 Filter bar */}
+              <div className="flex flex-wrap gap-3 mb-6">
+                {/* Class dropdown */}
+                <select
+                  value={selectedClass}
+                  onChange={handleClassChange}
+                  className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                >
+                  {/* <option value="">All Classes</option> */}
+                  {StudentClasses.map((cls) => (
+                    <option key={cls.value} value={cls.value}>
+                      {cls.label}
+                    </option>
+                  ))}
+                </select>
+
+                {/* Search input + button */}
+                <div className="flex gap-2 flex-1">
+                  <input
+                    type="text"
+                    value={searchInput}
+                    onChange={(e) => setSearchInput(e.target.value)}
+                    onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+                    placeholder="Search by student name..."
+                    className="flex-1 px-4 py-2 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                  />
+                  <button
+                    onClick={() => setSearchQuery(searchInput)}
+                    className="flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+                  >
+                    <Search size={18} />
+                    Search
+                  </button>
+                  {/* Clear filters */}
+                  {searchQuery && (
+                    <button
+                      onClick={handleClear}
+                      className="px-4 py-2 border border-gray-300 text-gray-600 rounded-lg hover:bg-gray-100 transition-colors"
+                    >
+                      Clear
+                    </button>
+                  )}
+                </div>
+              </div>
+
               {showClearPrompt ? (
                 <p className="mb-6">
                   Are you sure you want to clear all result records?{" "}
@@ -449,78 +495,101 @@ const Admin = () => {
                       <th className="text-left py-3 px-4 font-semibold text-gray-700">
                         Score
                       </th>
-                      {/* <th className="text-left py-3 px-4 font-semibold text-gray-700">
-                        Weighted Percentage(over 60)
-                      </th> */}
                       <th className="text-right py-3 px-4 font-semibold text-gray-700">
                         Actions
                       </th>
                     </tr>
                   </thead>
                   <tbody>
-                    {results.map((result, idx) => (
-                      <tr
-                        key={idx}
-                        className="border-b border-gray-200 hover:bg-gray-50 transition-colors"
-                      >
+                    {loading ? (
+                      <tr>
                         <td
-                          className="py-4 px-4 font-medium text-gray-800 capitalize"
-                          onClick={() => setSelectedResult(result)}
+                          colSpan={6}
+                          className="py-8 text-center text-gray-400"
                         >
-                          {result.student?.name}
-                        </td>
-                        <td className="py-4 px-4 text-gray-600">
-                          {StudentClasses?.find(
-                            (val) => val.value === result.student?.class
-                          )?.label || "N/A"}
-                          {/* {result.student.class} */}
-                        </td>
-                        <td className="py-4 px-4 text-gray-600 text-sm">
-                          {new Date(result.date).toLocaleString()}
-                        </td>
-                        <td className="py-4 px-4">
-                          <span>{result.student?.paperTitle || "-"}</span>
-                        </td>
-                        <td className="py-4 px-4">
-                          <span
-                            className={`font-bold ${getScoreColor(
-                              result.score * result.questionWeight
-                            )}`}
-                          >
-                            {`${result.score * result.questionWeight}/${
-                              result.totalQuestions * result.questionWeight
-                            }`}
-                          </span>
-                        </td>
-                        <td className="py-4 px-4">
-                          <div className="flex gap-2 justify-end">
-                            <button
-                              onClick={() => setSelectedResult(result)}
-                              className="p-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition-colors"
-                              title="View Details"
-                            >
-                              <Eye size={18} />
-                            </button>
-                            <button
-                              onClick={() => downloadIndividualResult(result)}
-                              className="p-2 bg-green-100 text-green-600 rounded-lg hover:bg-green-200 transition-colors"
-                              title="Download"
-                            >
-                              <Download size={18} />
-                            </button>
-                          </div>
+                          Loading...
                         </td>
                       </tr>
-                    ))}
+                    ) : filteredResults.length === 0 ? (
+                      <tr>
+                        <td
+                          colSpan={6}
+                          className="py-8 text-center text-gray-400"
+                        >
+                          No results found.
+                        </td>
+                      </tr>
+                    ) : (
+                      filteredResults.map(
+                        (
+                          result,
+                          idx // 👈 swap results → filteredResults
+                        ) => (
+                          <tr
+                            key={idx}
+                            className="border-b border-gray-200 hover:bg-gray-50 transition-colors"
+                          >
+                            <td
+                              className="py-4 px-4 font-medium text-gray-800 capitalize cursor-pointer"
+                              onClick={() => setSelectedResult(result)}
+                            >
+                              {result.student?.name}
+                            </td>
+                            <td className="py-4 px-4 text-gray-600">
+                              {StudentClasses?.find(
+                                (val) => val.value === result.student?.class
+                              )?.label || "N/A"}
+                            </td>
+                            <td className="py-4 px-4 text-gray-600 text-sm">
+                              {new Date(result.date).toLocaleString()}
+                            </td>
+                            <td className="py-4 px-4">
+                              <span>{result.student?.paperTitle || "-"}</span>
+                            </td>
+                            <td className="py-4 px-4">
+                              <span
+                                className={`font-bold ${getScoreColor(
+                                  result.score * result.questionWeight
+                                )}`}
+                              >
+                                {`${result.score * result.questionWeight}/${
+                                  result.totalQuestions * result.questionWeight
+                                }`}
+                              </span>
+                            </td>
+                            <td className="py-4 px-4">
+                              <div className="flex gap-2 justify-end">
+                                <button
+                                  onClick={() => setSelectedResult(result)}
+                                  className="p-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition-colors"
+                                  title="View Details"
+                                >
+                                  <Eye size={18} />
+                                </button>
+                                <button
+                                  onClick={() =>
+                                    downloadIndividualResult(result)
+                                  }
+                                  className="p-2 bg-green-100 text-green-600 rounded-lg hover:bg-green-200 transition-colors"
+                                  title="Download"
+                                >
+                                  <Download size={18} />
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                        )
+                      )
+                    )}
                   </tbody>
                 </table>
               </div>
             </>
-          )}
+          }
         </div>
       </div>
     </div>
   );
 };
 
-export default Admin;
+export default SuperAdmin;
