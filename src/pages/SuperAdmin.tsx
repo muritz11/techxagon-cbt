@@ -6,11 +6,7 @@ import {
   LogOut,
   User,
   Calendar,
-  X,
   Award,
-  FileText,
-  Upload,
-  Loader,
   Search,
 } from "lucide-react";
 import type { QuizResultInterface } from "../utils/types";
@@ -44,7 +40,7 @@ const SuperAdmin = () => {
       if (grade) params.append("class", grade);
 
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/result/all?${params.toString()}`
+        `${API_URL}/result/all?${params.toString()}`
       );
       const data = await response.json();
 
