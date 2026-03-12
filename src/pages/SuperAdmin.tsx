@@ -18,6 +18,8 @@ const SuperAdmin = () => {
   const navigate = useNavigate();
   const [showClearPrompt, setShowClearPrompt] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [total, setTotal] = useState(0);
+  const [overallTotal, setOverallTotal] = useState(0);
   const [password, setPassword] = useState("");
   const [results, setResults] = useState<QuizResultInterface[]>([]);
   const [selectedResult, setSelectedResult] =
@@ -32,12 +34,12 @@ const SuperAdmin = () => {
   // const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const fetchResults = async (query = "", grade = "") => {
+  const fetchResults = async () => {
     try {
       setLoading(true);
       const params = new URLSearchParams();
-      if (query) params.append("name", query);
-      if (grade) params.append("class", grade);
+      if (searchQuery) params.append("name", searchQuery);
+      if (selectedClass) params.append("class", selectedClass);
 
       const response = await fetch(
         `${API_URL}/result/all?${params.toString()}`
@@ -46,7 +48,9 @@ const SuperAdmin = () => {
 
       console.log("result fetch response", data);
       if (!response.ok) alert(`result fetch failed: ${data?.message}`);
-      setResults(data.data);
+      setResults(data?.data);
+      setTotal(data?.total);
+      setOverallTotal(data?.totalSubmitted);
     } catch (error) {
       console.log("fetch result failed: ", error);
       alert("An error occurred fetching results");
@@ -59,40 +63,23 @@ const SuperAdmin = () => {
   // fetch on mount
   useEffect(() => {
     fetchResults();
-  }, []);
+  }, [searchQuery, selectedClass]);
 
   // refetch when class dropdown changes
   const handleClassChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedClass(e.target.value);
-    fetchResults(searchQuery, e.target.value);
   };
 
   // refetch when search is triggered
   const handleSearch = () => {
     setSearchQuery(searchInput);
-    fetchResults(searchInput, selectedClass);
   };
 
   // clear all filters
   const handleClear = () => {
     setSearchInput("");
     setSearchQuery("");
-    fetchResults();
   };
-
-  const filteredResults = useMemo(() => {
-    return results.filter((result) => {
-      const matchesClass = selectedClass
-        ? result.student?.class === selectedClass
-        : true;
-
-      const matchesSearch = searchQuery
-        ? result.student?.name.toLowerCase().includes(searchQuery.toLowerCase())
-        : true;
-
-      return matchesClass && matchesSearch;
-    });
-  }, [results, selectedClass, searchQuery]);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -181,6 +168,8 @@ const SuperAdmin = () => {
     if (weightedScore >= 20) return "text-yellow-600";
     return "text-red-600";
   };
+
+  let tableCount = 0;
 
   if (!isAuthenticated) {
     return (
@@ -371,8 +360,9 @@ const SuperAdmin = () => {
               <h1 className="text-3xl font-bold text-gray-800 mb-2">
                 Quiz Results Dashboard
               </h1>
+              <p className="text-gray-600">Total submissions: {total}</p>
               <p className="text-gray-600">
-                Total submissions: {results.length}
+                Overall Total submissions: {overallTotal}
               </p>
             </div>
             <button
@@ -477,6 +467,9 @@ const SuperAdmin = () => {
                   <thead className="bg-gray-50 border-b-2 border-gray-200">
                     <tr>
                       <th className="text-left py-3 px-4 font-semibold text-gray-700">
+                        #
+                      </th>
+                      <th className="text-left py-3 px-4 font-semibold text-gray-700">
                         Student Name
                       </th>
                       <th className="text-left py-3 px-4 font-semibold text-gray-700">
@@ -506,7 +499,7 @@ const SuperAdmin = () => {
                           Loading...
                         </td>
                       </tr>
-                    ) : filteredResults.length === 0 ? (
+                    ) : results.length === 0 ? (
                       <tr>
                         <td
                           colSpan={6}
@@ -516,65 +509,72 @@ const SuperAdmin = () => {
                         </td>
                       </tr>
                     ) : (
-                      filteredResults.map(
+                      results.map(
                         (
                           result,
                           idx // 👈 swap results → filteredResults
-                        ) => (
-                          <tr
-                            key={idx}
-                            className="border-b border-gray-200 hover:bg-gray-50 transition-colors"
-                          >
-                            <td
-                              className="py-4 px-4 font-medium text-gray-800 capitalize cursor-pointer"
-                              onClick={() => setSelectedResult(result)}
+                        ) => {
+                          tableCount++;
+                          return (
+                            <tr
+                              key={idx}
+                              className="border-b border-gray-200 hover:bg-gray-50 transition-colors"
                             >
-                              {result.student?.name}
-                            </td>
-                            <td className="py-4 px-4 text-gray-600">
-                              {StudentClasses?.find(
-                                (val) => val.value === result.student?.class
-                              )?.label || "N/A"}
-                            </td>
-                            <td className="py-4 px-4 text-gray-600 text-sm">
-                              {new Date(result.date).toLocaleString()}
-                            </td>
-                            <td className="py-4 px-4">
-                              <span>{result.student?.paperTitle || "-"}</span>
-                            </td>
-                            <td className="py-4 px-4">
-                              <span
-                                className={`font-bold ${getScoreColor(
-                                  result.score * result.questionWeight
-                                )}`}
+                              <td className="py-4 px-4 text-gray-600">
+                                {tableCount}
+                              </td>
+                              <td
+                                className="py-4 px-4 font-medium text-gray-800 capitalize cursor-pointer"
+                                onClick={() => setSelectedResult(result)}
                               >
-                                {`${result.score * result.questionWeight}/${
-                                  result.totalQuestions * result.questionWeight
-                                }`}
-                              </span>
-                            </td>
-                            <td className="py-4 px-4">
-                              <div className="flex gap-2 justify-end">
-                                <button
-                                  onClick={() => setSelectedResult(result)}
-                                  className="p-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition-colors"
-                                  title="View Details"
+                                {result.student?.name}
+                              </td>
+                              <td className="py-4 px-4 text-gray-600">
+                                {StudentClasses?.find(
+                                  (val) => val.value === result.student?.class
+                                )?.label || "N/A"}
+                              </td>
+                              <td className="py-4 px-4 text-gray-600 text-sm">
+                                {new Date(result.date).toLocaleString()}
+                              </td>
+                              <td className="py-4 px-4">
+                                <span>{result.student?.paperTitle || "-"}</span>
+                              </td>
+                              <td className="py-4 px-4">
+                                <span
+                                  className={`font-bold ${getScoreColor(
+                                    result.score * result.questionWeight
+                                  )}`}
                                 >
-                                  <Eye size={18} />
-                                </button>
-                                <button
-                                  onClick={() =>
-                                    downloadIndividualResult(result)
-                                  }
-                                  className="p-2 bg-green-100 text-green-600 rounded-lg hover:bg-green-200 transition-colors"
-                                  title="Download"
-                                >
-                                  <Download size={18} />
-                                </button>
-                              </div>
-                            </td>
-                          </tr>
-                        )
+                                  {`${result.score * result.questionWeight}/${
+                                    result.totalQuestions *
+                                    result.questionWeight
+                                  }`}
+                                </span>
+                              </td>
+                              <td className="py-4 px-4">
+                                <div className="flex gap-2 justify-end">
+                                  <button
+                                    onClick={() => setSelectedResult(result)}
+                                    className="p-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition-colors"
+                                    title="View Details"
+                                  >
+                                    <Eye size={18} />
+                                  </button>
+                                  <button
+                                    onClick={() =>
+                                      downloadIndividualResult(result)
+                                    }
+                                    className="p-2 bg-green-100 text-green-600 rounded-lg hover:bg-green-200 transition-colors"
+                                    title="Download"
+                                  >
+                                    <Download size={18} />
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                          );
+                        }
                       )
                     )}
                   </tbody>
