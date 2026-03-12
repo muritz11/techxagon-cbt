@@ -1,4 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, {
+  useState,
+  useEffect,
+  useCallback,
+  useRef,
+  useMemo,
+} from "react";
 import {
   Download,
   Eye,
@@ -12,6 +18,7 @@ import {
 import type { QuizResultInterface } from "../utils/types";
 import StudentClasses from "../assets/data/classes.json";
 import { useNavigate } from "react-router-dom";
+import { debounce } from "lodash";
 const API_URL = import.meta.env.VITE_API_URL; // ← Vite uses import.meta.env not process.env
 
 const SuperAdmin = () => {
@@ -27,42 +34,43 @@ const SuperAdmin = () => {
   const [error, setError] = useState("");
 
   const [selectedClass, setSelectedClass] = useState(
-    StudentClasses?.[0]?.value
+    StudentClasses?.[0]?.value,
   );
   const [searchInput, setSearchInput] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   // const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const fetchResults = async () => {
-    try {
-      setLoading(true);
-      const params = new URLSearchParams();
-      if (searchQuery) params.append("name", searchQuery);
-      if (selectedClass) params.append("class", selectedClass);
+  // const fetchResults = async () => {
+  //   try {
+  //     setLoading(true);
+  //     const params = new URLSearchParams();
+  //     if (searchQuery) params.append("name", searchQuery);
+  //     if (selectedClass) params.append("class", selectedClass);
 
-      const response = await fetch(
-        `${API_URL}/result/all?${params.toString()}`
-      );
-      const data = await response.json();
+  //     const response = await fetch(
+  //       `${API_URL}/result/all?${params.toString()}`,
+  //     );
+  //     const data = await response.json();
 
-      console.log("result fetch response", data);
-      if (!response.ok) alert(`result fetch failed: ${data?.message}`);
-      setResults(data?.data);
-      setTotal(data?.total);
-      setOverallTotal(data?.totalSubmitted);
-    } catch (error) {
-      console.log("fetch result failed: ", error);
-      alert("An error occurred fetching results");
-      // toast.error((error as Error).message);
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     console.log("result fetch response", data);
+  //     if (!response.ok) alert(`result fetch failed: ${data?.message}`);
+  //     setResults(data?.data);
+  //     setTotal(data?.total);
+  //     setOverallTotal(data?.totalSubmitted);
+  //   } catch (error) {
+  //     console.log("fetch result failed: ", error);
+  //     alert("An error occurred fetching results");
+  //     // toast.error((error as Error).message);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   // fetch on mount
+
   useEffect(() => {
-    fetchResults();
+    searcher(searchQuery, selectedClass);
   }, [searchQuery, selectedClass]);
 
   // refetch when class dropdown changes
@@ -70,8 +78,9 @@ const SuperAdmin = () => {
     setSelectedClass(e.target.value);
   };
 
-  // refetch when search is triggered
+  // refetch when search is triggered manually (Enter or Button)
   const handleSearch = () => {
+    debouncedSearch.cancel();
     setSearchQuery(searchInput);
   };
 
@@ -80,6 +89,68 @@ const SuperAdmin = () => {
     setSearchInput("");
     setSearchQuery("");
   };
+
+  const abortController = useRef<AbortController | null>(null);
+  const inputRef = useRef<HTMLInputElement | null>(null);
+
+  const searcher = useCallback(
+    async (searchQuery?: string, selectedClass?: string) => {
+      if (abortController.current) abortController.current.abort();
+
+      const controller = new AbortController();
+      abortController.current = controller;
+      try {
+        setLoading(true);
+        const params = new URLSearchParams();
+        if (searchQuery) params.append("name", searchQuery);
+        if (selectedClass) params.append("class", selectedClass);
+
+        const response = await fetch(
+          `${API_URL}/result/all?${params.toString()}`,
+          {
+            signal: controller.signal,
+          },
+        );
+        const data = await response.json();
+
+        console.log("result fetch response", data);
+        if (!response.ok) alert(`result fetch failed: ${data?.message}`);
+        setResults(data?.data);
+        setTotal(data?.total);
+        setOverallTotal(data?.totalSubmitted);
+      } catch (error) {
+        if (
+          typeof error === "object" &&
+          error !== null &&
+          "name" in error &&
+          ((error as { name: string }).name === "AbortError" ||
+            (error as { name: string }).name === "CanceledError")
+        )
+          return;
+        console.log("fetch result failed: ", error);
+        alert("An error occurred fetching results");
+        // toast.error((error as Error).message);
+      } finally {
+        setLoading(false);
+      }
+    },
+    [],
+  );
+
+  const debouncedSearch = useMemo(
+    () =>
+      debounce((query: string) => {
+        setSearchQuery(query);
+      }, 500),
+    [],
+  );
+
+  // Cleanup debounce on unmount
+  useEffect(() => {
+    return () => {
+      debouncedSearch.cancel();
+    };
+  }, [debouncedSearch]);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -240,7 +311,7 @@ const SuperAdmin = () => {
                   <span>
                     Class:{" "}
                     {StudentClasses?.find(
-                      (val) => val.value === selectedResult.student?.class
+                      (val) => val.value === selectedResult.student?.class,
                     )?.label || "N/A"}
                   </span>
                 </div>
@@ -252,12 +323,12 @@ const SuperAdmin = () => {
                   <Award
                     size={16}
                     className={getScoreColor(
-                      selectedResult.score * selectedResult.questionWeight
+                      selectedResult.score * selectedResult.questionWeight,
                     )}
                   />
                   <span
                     className={`font-bold ${getScoreColor(
-                      selectedResult.score * selectedResult.questionWeight
+                      selectedResult.score * selectedResult.questionWeight,
                     )}`}
                   >
                     Score:{" "}
@@ -315,8 +386,8 @@ const SuperAdmin = () => {
                                 option === q.answer
                                   ? "border-green-500 bg-green-50"
                                   : option === userAnswer
-                                  ? "border-red-500 bg-red-50"
-                                  : "border-gray-200 bg-gray-50"
+                                    ? "border-red-500 bg-red-50"
+                                    : "border-gray-200 bg-gray-50"
                               }`}
                             >
                               {option}
@@ -414,13 +485,18 @@ const SuperAdmin = () => {
                   <input
                     type="text"
                     value={searchInput}
-                    onChange={(e) => setSearchInput(e.target.value)}
+                    ref={inputRef}
+                    onChange={(e) => {
+                      const value = e.target.value;
+                      setSearchInput(value);
+                      debouncedSearch(value);
+                    }}
                     onKeyDown={(e) => e.key === "Enter" && handleSearch()}
                     placeholder="Search by student name..."
                     className="flex-1 px-4 py-2 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-400"
                   />
                   <button
-                    onClick={() => setSearchQuery(searchInput)}
+                    onClick={handleSearch}
                     className="flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
                   >
                     <Search size={18} />
@@ -512,7 +588,7 @@ const SuperAdmin = () => {
                       results.map(
                         (
                           result,
-                          idx // 👈 swap results → filteredResults
+                          idx, // 👈 swap results → filteredResults
                         ) => {
                           tableCount++;
                           return (
@@ -531,7 +607,7 @@ const SuperAdmin = () => {
                               </td>
                               <td className="py-4 px-4 text-gray-600">
                                 {StudentClasses?.find(
-                                  (val) => val.value === result.student?.class
+                                  (val) => val.value === result.student?.class,
                                 )?.label || "N/A"}
                               </td>
                               <td className="py-4 px-4 text-gray-600 text-sm">
@@ -543,7 +619,7 @@ const SuperAdmin = () => {
                               <td className="py-4 px-4">
                                 <span
                                   className={`font-bold ${getScoreColor(
-                                    result.score * result.questionWeight
+                                    result.score * result.questionWeight,
                                   )}`}
                                 >
                                   {`${result.score * result.questionWeight}/${
@@ -574,7 +650,7 @@ const SuperAdmin = () => {
                               </td>
                             </tr>
                           );
-                        }
+                        },
                       )
                     )}
                   </tbody>
