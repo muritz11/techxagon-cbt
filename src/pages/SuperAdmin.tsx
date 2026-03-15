@@ -88,6 +88,7 @@ const SuperAdmin = () => {
   const handleClear = () => {
     setSearchInput("");
     setSearchQuery("");
+    setSelectedClass(StudentClasses?.[0]?.value);
   };
 
   const abortController = useRef<AbortController | null>(null);
@@ -472,7 +473,7 @@ const SuperAdmin = () => {
                   onChange={handleClassChange}
                   className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-400"
                 >
-                  {/* <option value="">All Classes</option> */}
+                  <option value="">All Classes</option>
                   {StudentClasses.map((cls) => (
                     <option key={cls.value} value={cls.value}>
                       {cls.label}
@@ -588,7 +589,7 @@ const SuperAdmin = () => {
                       results.map(
                         (
                           result,
-                          idx, // 👈 swap results → filteredResults
+                          idx // 👈 swap results → filteredResults
                         ) => {
                           tableCount++;
                           return (
@@ -607,7 +608,7 @@ const SuperAdmin = () => {
                               </td>
                               <td className="py-4 px-4 text-gray-600">
                                 {StudentClasses?.find(
-                                  (val) => val.value === result.student?.class,
+                                  (val) => val.value === result.student?.class
                                 )?.label || "N/A"}
                               </td>
                               <td className="py-4 px-4 text-gray-600 text-sm">
@@ -619,7 +620,7 @@ const SuperAdmin = () => {
                               <td className="py-4 px-4">
                                 <span
                                   className={`font-bold ${getScoreColor(
-                                    result.score * result.questionWeight,
+                                    result.score * result.questionWeight
                                   )}`}
                                 >
                                   {`${result.score * result.questionWeight}/${
@@ -650,7 +651,7 @@ const SuperAdmin = () => {
                               </td>
                             </tr>
                           );
-                        },
+                        }
                       )
                     )}
                   </tbody>
