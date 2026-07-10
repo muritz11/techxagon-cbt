@@ -1,4 +1,5 @@
 [
   { "id": 1, "label": "Introduction to programming & scratch" },
-  { "id": 2, "label": "Web development basics" }
+  { "id": 2, "label": "Web development basics" },
+  { "id": 3, "label": "Introduction to programming" }
 ]
