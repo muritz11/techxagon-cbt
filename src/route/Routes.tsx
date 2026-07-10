@@ -1,5 +1,5 @@
 // import { Suspense } from "react";
-import { createBrowserRouter, Outlet } from "react-router-dom";
+import { createHashRouter, Outlet } from "react-router-dom";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Quiz from "../pages/Quiz";
@@ -32,7 +32,7 @@ import SuperAdmin from "../pages/SuperAdmin";
 // };
 
 const Routes = () => {
-  let router = createBrowserRouter([
+  let router = createHashRouter([
     // auth
     {
       path: "/",
