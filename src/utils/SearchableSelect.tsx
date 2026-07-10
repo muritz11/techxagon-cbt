@@ -5,6 +5,42 @@ interface Option {
   label: string;
 }
 
+// strips spaces/punctuation so "JS 3A" and "js3a" compare equal
+const normalize = (str: string) => str.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+const getBigrams = (str: string) => {
+  const bigrams: string[] = [];
+  for (let i = 0; i < str.length - 1; i++) {
+    bigrams.push(str.substring(i, i + 2));
+  }
+  return bigrams;
+};
+
+// Dice's coefficient: tolerates typos like an extra/missing letter ("jss3a" ~ "js3a")
+const similarity = (a: string, b: string) => {
+  if (a.length < 2 || b.length < 2) return a === b ? 1 : 0;
+
+  const bigramsA = getBigrams(a);
+  const bigramsBPool = getBigrams(b);
+  let matches = 0;
+  for (const bigram of bigramsA) {
+    const idx = bigramsBPool.indexOf(bigram);
+    if (idx !== -1) {
+      matches++;
+      bigramsBPool.splice(idx, 1);
+    }
+  }
+  return (2 * matches) / (bigramsA.length + getBigrams(b).length);
+};
+
+const isFuzzyMatch = (label: string, query: string) => {
+  const normLabel = normalize(label);
+  const normQuery = normalize(query);
+  if (!normQuery) return true;
+  if (normLabel.includes(normQuery)) return true;
+  return similarity(normQuery, normLabel) >= 0.7;
+};
+
 interface Props {
   value: string;
   options: Option[];
@@ -36,9 +72,7 @@ export default function SearchableSelect({
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
-  const filtered = options.filter((opt) =>
-    opt.label.toLowerCase().includes(query.toLowerCase())
-  );
+  const filtered = options.filter((opt) => isFuzzyMatch(opt.label, query));
 
   const handleSelect = (opt: Option) => {
     // setSelected(opt);

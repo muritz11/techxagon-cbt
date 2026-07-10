@@ -7,7 +7,7 @@ import { checkEmptyFields } from "../utils/helpers";
 import type { AuthStudentInterface } from "../utils/types";
 
 function Login() {
-  const [showError, setShowError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const [formState, setFormState] = useState({
     name: "",
     class: "",
@@ -18,14 +18,24 @@ function Login() {
     value: val.value,
   }));
 
+  const showTemporaryError = (message: string) => {
+    setErrorMessage(message);
+    setTimeout(() => {
+      setErrorMessage("");
+    }, 3000);
+  };
+
   const startQuiz = () => {
     const isFormErr = checkEmptyFields({ ...formState });
 
     if (isFormErr) {
-      setShowError(true);
-      setTimeout(() => {
-        setShowError(false);
-      }, 3000);
+      showTemporaryError("Name and class is required");
+      return;
+    }
+
+    const nameWords = formState.name.trim().split(/\s+/).filter(Boolean);
+    if (nameWords.length < 2) {
+      showTemporaryError("Please enter your full name (first and last name)");
       return;
     }
 
@@ -48,7 +58,10 @@ function Login() {
             Student Information
           </h1>
 
-          <form className="space-y-4">
+          <form
+            className="space-y-4"
+            onSubmit={(e) => e.preventDefault()}
+          >
             {/* Name Input */}
             <div>
               <label className="block text-sm font-medium mb-1">Name</label>
@@ -73,8 +86,8 @@ function Login() {
                 onChange={(v) => setFormState({ ...formState, class: v })}
               />
             </div>
-            {showError ? (
-              <p className="text-red-500">Name and class is required</p>
+            {errorMessage ? (
+              <p className="text-red-500">{errorMessage}</p>
             ) : (
               ""
             )}

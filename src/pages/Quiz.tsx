@@ -12,6 +12,8 @@ import {
   type QuizResultInterface,
 } from "../utils/types";
 
+const MIN_ANSWERED_REQUIRED = 4;
+
 const Quiz = () => {
   const minutes = Math.floor(QUIZ_DURATION / 60);
   const navigate = useNavigate();
@@ -25,6 +27,7 @@ const Quiz = () => {
   const [timeRemaining, setTimeRemaining] = useState(QUIZ_DURATION);
   const [isQuizComplete, setIsQuizComplete] = useState(false);
   const [isQuizStarted, setIsQuizStarted] = useState(false);
+  const [showSubmitWarning, setShowSubmitWarning] = useState(false);
   const student: AuthStudentInterface | null = JSON.parse(
     localStorage.getItem("student") || "null"
   );
@@ -63,6 +66,7 @@ const Quiz = () => {
     setSelectedAnswers({});
     setTimeRemaining(QUIZ_DURATION);
     setIsQuizComplete(false);
+    setShowSubmitWarning(false);
   };
 
   const handleAnswerSelect = (answer: string) => {
@@ -86,6 +90,18 @@ const Quiz = () => {
 
   const submitQuiz = () => {
     setIsQuizComplete(true);
+  };
+
+  const answeredCount = Object.keys(selectedAnswers).length;
+  const hasMetMinimumAnswers = answeredCount >= MIN_ANSWERED_REQUIRED;
+
+  const handleSubmitClick = () => {
+    setShowSubmitWarning(true);
+  };
+
+  const confirmSubmit = () => {
+    setShowSubmitWarning(false);
+    submitQuiz();
   };
 
   const calculateScore = () => {
@@ -322,6 +338,69 @@ const Quiz = () => {
             ))}
           </div>
 
+          {showSubmitWarning && (
+            <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
+              <div className="bg-white rounded-2xl shadow-xl p-6 max-w-sm w-full text-center">
+                {hasMetMinimumAnswers ? (
+                  <>
+                    <h3 className="text-lg font-bold text-gray-800 mb-2">
+                      Submit Quiz?
+                    </h3>
+                    <p className="text-gray-600 mb-6">
+                      You've answered{" "}
+                      <span className="font-semibold text-indigo-600">
+                        {answeredCount}
+                      </span>{" "}
+                      of{" "}
+                      <span className="font-semibold text-indigo-600">
+                        {selectedQuestions.length}
+                      </span>{" "}
+                      questions. Are you sure you want to submit?
+                    </p>
+                    <div className="flex gap-3">
+                      <button
+                        onClick={() => setShowSubmitWarning(false)}
+                        className="flex-1 py-2 rounded-lg border-2 border-gray-300 font-semibold hover:bg-gray-50 transition-colors"
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        onClick={confirmSubmit}
+                        className="flex-1 py-2 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition-colors"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <h3 className="text-lg font-bold text-gray-800 mb-2">
+                      Answer More Questions
+                    </h3>
+                    <p className="text-gray-600 mb-6">
+                      You must answer at least {MIN_ANSWERED_REQUIRED}{" "}
+                      questions before submitting. You've answered{" "}
+                      <span className="font-semibold text-red-600">
+                        {answeredCount}
+                      </span>{" "}
+                      of{" "}
+                      <span className="font-semibold text-red-600">
+                        {selectedQuestions.length}
+                      </span>{" "}
+                      questions.
+                    </p>
+                    <button
+                      onClick={() => setShowSubmitWarning(false)}
+                      className="w-full py-2 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition-colors"
+                    >
+                      Continue
+                    </button>
+                  </>
+                )}
+              </div>
+            </div>
+          )}
+
           <div className="flex gap-3">
             <button
               onClick={goToPreviousQuestion}
@@ -332,7 +411,7 @@ const Quiz = () => {
             </button>
             {currentQuestionIndex === selectedQuestions.length - 1 ? (
               <button
-                onClick={submitQuiz}
+                onClick={handleSubmitClick}
                 className="flex-1 bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
               >
                 Submit Quiz
