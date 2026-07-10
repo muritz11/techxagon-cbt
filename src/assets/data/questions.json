@@ -1,129 +1,5 @@
 [
   {
-    "paperId": 3,
-    "question": "Who invented the World Wide Web?",
-    "options": [
-      "Bill Gate",
-      "Tim Berners-Lee",
-      "Mark Zuckerberg",
-      "Steve Jobs"
-    ],
-    "answer": "Tim Berners-Lee",
-    "explanation": "Sir Tim Berners-Lee invented the World Wide Web in 1989."
-  },
-  {
-    "paperId": 3,
-    "question": "When was the World Wide Web created?",
-    "options": ["1975", "2001", "1989", "1960"],
-    "answer": "1989",
-    "explanation": "The Web was created in 1989 by Tim Berners-Lee."
-  },
-  {
-    "paperId": 3,
-    "question": "When was the Internet founded?",
-    "options": ["1989", "1960s", "1975", "2000"],
-    "answer": "1960s",
-    "explanation": "The Internet was founded in the 1960s, much earlier than the Web."
-  },
-  {
-    "paperId": 3,
-    "question": "What does HTTP stand for?",
-    "options": [
-      "HyperText Transfer Protocol",
-      "High Tech Transfer Process",
-      "Hyperlink Text Transmission Program",
-      "Host Transfer Text Protocol"
-    ],
-    "answer": "HyperText Transfer Protocol",
-    "explanation": "HTTP stands for HyperText Transfer Protocol."
-  },
-  {
-    "paperId": 3,
-    "question": "Which best describes the Internet?",
-    "options": [
-      "A browser used to access web pages",
-      "The global physical infrastructure of interconnected computers and networks",
-      "A software service that runs on the Web",
-      "A protocol for sending emails"
-    ],
-    "answer": "The global physical infrastructure of interconnected computers and networks",
-    "explanation": "It is the foundation, not a service or application."
-  },
-  {
-    "paperId": 3,
-    "question": "What is a variable?",
-    "options": [
-      "A rule for writing code",
-      "A labeled container that holds a value",
-      "A symbol that performs an action",
-      "A type of loop"
-    ],
-    "answer": "A labeled container that holds a value",
-    "explanation": "A variable is a labeled container that holds a value, like a score tracker in a game."
-  },
-  {
-    "paperId": 3,
-    "question": "What does the + operator do?",
-    "options": [
-      "Compares two values",
-      "Returns true or false",
-      "Adds two numbers together",
-      "Stores a value in memory"
-    ],
-    "answer": "Adds two numbers together",
-    "explanation": "The + is an arithmetic operator. The addition operator (+) adds two numbers together."
-  },
-  {
-    "paperId": 3,
-    "question": "Which of these best describes what a loop does?",
-    "options": [
-      "Stores a value for later use",
-      "Compares two numbers",
-      "Repeats an action multiple times",
-      "Connects to the internet"
-    ],
-    "answer": "Repeats an action multiple times",
-    "explanation": "Loops let you repeat actions multiple times without rewriting code. Instead of writing the same line ten times, you use one loop."
-  },
-  {
-    "paperId": 3,
-    "question": "What is the full meaning of WWW?",
-    "options": [
-      "Wide World of Web",
-      "World Wide Web",
-      "Web of World Wires",
-      "Worldwide Wireless Web"
-    ],
-    "answer": "World Wide Web",
-    "explanation": "WWW stands for World Wide Web."
-  },
-  {
-    "paperId": 3,
-    "question": "Which of these is NOT one of the 3 main types of operators?",
-    "options": ["Arithmetic", "Logical", "Sequential", "Comparison"],
-    "answer": "Sequential",
-    "explanation": "The three main operator types are Arithmetic, Comparison, and Logical."
-  },
-  {
-    "paperId": 3,
-    "question": "What is an operator in programming?",
-    "options": [
-      "A type of variable",
-      "A symbol that represents an action",
-      "A rule for writing code",
-      "A loop that repeats instructions"
-    ],
-    "answer": "A symbol that represents an action",
-    "explanation": "An operator is a symbol that represents an action, such as addition or subtraction."
-  },
-  {
-    "paperId": 3,
-    "question": "The internet uses which protocol to transmit data?",
-    "options": ["HTTP", "FTP", "TCP/IP", "SMTP"],
-    "answer": "TCP/IP",
-    "explanation": "The internet uses TCP (Transmission Control Protocol) or IP (Internet Protocol) to transmit data."
-  },
-  {
     "paperId": 2,
     "question": "In HTML, what is an attribute?",
     "options": [
@@ -248,6 +124,261 @@
     "explanation": "Websites communicate using HTTP or its secure version HTTPS."
   },
   {
+    "paperId": 2,
+    "question": "According to the Internet vs Web comparison, what is the World Wide Web (WWW)?",
+    "options": [
+      "The global physical infrastructure of computers and networks",
+      "A software service that runs on the internet's infrastructure to access information using HTTP",
+      "A single video",
+      "A type of computer virus"
+    ],
+    "answer": "A software service that runs on the internet's infrastructure to access information using HTTP",
+    "explanation": "The World Wide Web (WWW) is a software service running on the internet's infrastructure to access information using HTTP."
+  },
+  {
+    "paperId": 2,
+    "question": "Which protocol does the internet (not the web) use to transmit data?",
+    "options": ["HTTP", "HTTPS", "TCP/IP", "FTP"],
+    "answer": "TCP/IP",
+    "explanation": "The internet uses TCP (Transmission Control Protocol) or IP (Internet Protocol) to transmit data."
+  },
+  {
+    "paperId": 2,
+    "question": "Who invented the World Wide Web?",
+    "options": [
+      "Bill Gates",
+      "Tim Berners-Lee",
+      "Steve Jobs",
+      "Mark Zuckerberg"
+    ],
+    "answer": "Tim Berners-Lee",
+    "explanation": "Sir Tim Berners-Lee invented the World Wide Web in 1989."
+  },
+  {
+    "paperId": 2,
+    "question": "In what year was the World Wide Web created?",
+    "options": ["1960", "1975", "1989", "2000"],
+    "answer": "1989",
+    "explanation": "The web was created in 1989, while the internet itself was founded in the 1960s."
+  },
+  {
+    "paperId": 2,
+    "question": "What does VoIP stand for?",
+    "options": [
+      "Video over Internet Protocol",
+      "Voice over Internet Protocol",
+      "Volume of Internet Protocol",
+      "Virtual Online Internet Protocol"
+    ],
+    "answer": "Voice over Internet Protocol",
+    "explanation": "VoIP stands for Voice over Internet Protocol, technology that enables real-time voice communication over the internet."
+  },
+  {
+    "paperId": 2,
+    "question": "Other than the World Wide Web, what else does the internet include?",
+    "options": [
+      "Only web pages",
+      "Email, online gaming, and VoIP, among others",
+      "Only search engines",
+      "Only text messages"
+    ],
+    "answer": "Email, online gaming, and VoIP, among others",
+    "explanation": "The internet encompasses email, online gaming, VoIP, and other services beyond just the Web."
+  },
+  {
+    "paperId": 2,
+    "question": "In CSS, what does a dot (.) before a name, like '.container', represent?",
+    "options": [
+      "An ID selector",
+      "A class selector",
+      "An element selector",
+      "A comment"
+    ],
+    "answer": "A class selector",
+    "explanation": "A dot (.) prefix in CSS denotes a class selector, which targets all elements with that class attribute."
+  },
+  {
+    "paperId": 2,
+    "question": "Which CSS property controls the size of text, as in 'font-size: 40px;'?",
+    "options": ["font-weight", "font-family", "font-size", "text-align"],
+    "answer": "font-size",
+    "explanation": "The font-size property controls how large or small text appears."
+  },
+  {
+    "paperId": 2,
+    "question": "Which CSS property aligns text, as in 'text-align: center;'?",
+    "options": ["text-align", "vertical-align", "align-items", "float"],
+    "answer": "text-align",
+    "explanation": "The text-align property is used to horizontally align text within an element, such as centering it."
+  },
+  {
+    "paperId": 2,
+    "question": "Which CSS property controls how bold text appears, as in 'font-weight: 500;'?",
+    "options": ["font-style", "font-weight", "font-size", "text-decoration"],
+    "answer": "font-weight",
+    "explanation": "The font-weight property controls the thickness/boldness of text."
+  },
+  {
+    "paperId": 2,
+    "question": "What does the color property control?",
+    "options": [
+      "The background color",
+      "The border color",
+      "The text color",
+      "The page's overall theme"
+    ],
+    "answer": "The text color",
+    "explanation": "The color property sets the color of an element's text."
+  },
+  {
+    "paperId": 2,
+    "question": "Why is the internet often compared to 'a highway' while the web is compared to 'a vehicle' on that highway?",
+    "options": [
+      "Because the internet moves faster than the web",
+      "Because the internet is the underlying infrastructure, while the web is one of many services that run on it",
+      "Because the web replaced the internet",
+      "Because they are the exact same thing"
+    ],
+    "answer": "Because the internet is the underlying infrastructure, while the web is one of many services that run on it",
+    "explanation": "The internet is the foundation (like a highway), while the web is a service on that foundation (like a vehicle running on the highway)."
+  },
+  {
+    "paperId": 2,
+    "question": "What does the CSS 'padding' property do?",
+    "options": [
+      "Adds space between an element's content and its border",
+      "Adds space outside an element's border",
+      "Changes the background color of an element",
+      "Rounds the corners of an element"
+    ],
+    "answer": "Adds space between an element's content and its border",
+    "explanation": "Padding creates internal spacing between an element's content and its border."
+  },
+  {
+    "paperId": 3,
+    "question": "Who invented the World Wide Web?",
+    "options": [
+      "Bill Gate",
+      "Tim Berners-Lee",
+      "Mark Zuckerberg",
+      "Steve Jobs"
+    ],
+    "answer": "Tim Berners-Lee",
+    "explanation": "Sir Tim Berners-Lee invented the World Wide Web in 1989."
+  },
+  {
+    "paperId": 3,
+    "question": "When was the World Wide Web created?",
+    "options": ["1975", "2001", "1989", "1960"],
+    "answer": "1989",
+    "explanation": "The Web was created in 1989 by Tim Berners-Lee."
+  },
+  {
+    "paperId": 3,
+    "question": "When was the Internet founded?",
+    "options": ["1989", "1960s", "1975", "2000"],
+    "answer": "1960s",
+    "explanation": "The Internet was founded in the 1960s, much earlier than the Web."
+  },
+  {
+    "paperId": 3,
+    "question": "What does HTTP stand for?",
+    "options": [
+      "HyperText Transfer Protocol",
+      "High Tech Transfer Process",
+      "Hyperlink Text Transmission Program",
+      "Host Transfer Text Protocol"
+    ],
+    "answer": "HyperText Transfer Protocol",
+    "explanation": "HTTP stands for HyperText Transfer Protocol."
+  },
+  {
+    "paperId": 3,
+    "question": "Which best describes the Internet?",
+    "options": [
+      "A browser used to access web pages",
+      "The global physical infrastructure of interconnected computers and networks",
+      "A software service that runs on the Web",
+      "A protocol for sending emails"
+    ],
+    "answer": "The global physical infrastructure of interconnected computers and networks",
+    "explanation": "It is the foundation, not a service or application."
+  },
+  {
+    "paperId": 3,
+    "question": "What is a variable?",
+    "options": [
+      "A rule for writing code",
+      "A labeled container that holds a value",
+      "A symbol that performs an action",
+      "A type of loop"
+    ],
+    "answer": "A labeled container that holds a value",
+    "explanation": "A variable is a labeled container that holds a value, like a score tracker in a game."
+  },
+  {
+    "paperId": 3,
+    "question": "What does the + operator do?",
+    "options": [
+      "Compares two values",
+      "Returns true or false",
+      "Adds two numbers together",
+      "Stores a value in memory"
+    ],
+    "answer": "Adds two numbers together",
+    "explanation": "The + is an arithmetic operator. The addition operator (+) adds two numbers together."
+  },
+  {
+    "paperId": 3,
+    "question": "Which of these best describes what a loop does?",
+    "options": [
+      "Stores a value for later use",
+      "Compares two numbers",
+      "Repeats an action multiple times",
+      "Connects to the internet"
+    ],
+    "answer": "Repeats an action multiple times",
+    "explanation": "Loops let you repeat actions multiple times without rewriting code. Instead of writing the same line ten times, you use one loop."
+  },
+  {
+    "paperId": 3,
+    "question": "What is the full meaning of WWW?",
+    "options": [
+      "Wide World of Web",
+      "World Wide Web",
+      "Web of World Wires",
+      "Worldwide Wireless Web"
+    ],
+    "answer": "World Wide Web",
+    "explanation": "WWW stands for World Wide Web."
+  },
+  {
+    "paperId": 3,
+    "question": "Which of these is NOT one of the 3 main types of operators?",
+    "options": ["Arithmetic", "Logical", "Sequential", "Comparison"],
+    "answer": "Sequential",
+    "explanation": "The three main operator types are Arithmetic, Comparison, and Logical."
+  },
+  {
+    "paperId": 3,
+    "question": "What is an operator in programming?",
+    "options": [
+      "A type of variable",
+      "A symbol that represents an action",
+      "A rule for writing code",
+      "A loop that repeats instructions"
+    ],
+    "answer": "A symbol that represents an action",
+    "explanation": "An operator is a symbol that represents an action, such as addition or subtraction."
+  },
+  {
+    "paperId": 3,
+    "question": "The internet (not the web) uses which protocol to transmit data?",
+    "options": ["HTTP", "FTP", "TCP/IP", "SMTP"],
+    "answer": "TCP/IP",
+    "explanation": "The internet uses TCP (Transmission Control Protocol) or IP (Internet Protocol) to transmit data."
+  },
+  {
     "paperId": 3,
     "question": "What is an expression in programming?",
     "options": [
@@ -269,7 +400,7 @@
   {
     "paperId": 3,
     "question": "Which symbol represents 'less than' in comparison operators?",
-    "options": ["<", ">", "<=", "!="],
+    "options": ["<", ">", "==", "!="],
     "answer": "<",
     "explanation": "The less than operator (<) compares two values and returns true if the first is smaller than the second."
   },
@@ -308,7 +439,7 @@
   },
   {
     "paperId": 3,
-    "question": "In the highway analogy, what does the internet represent?",
+    "question": "In the highway example, what does the internet represent?",
     "options": [
       "A single vehicle",
       "A highway with many different types of vehicles running on it",
@@ -320,7 +451,7 @@
   },
   {
     "paperId": 3,
-    "question": "In the highway analogy, what does the Web represent?",
+    "question": "In the highway example, what does the Web represent?",
     "options": [
       "The entire highway",
       "A specific type of vehicle running on the highway",
@@ -368,7 +499,7 @@
   },
   {
     "paperId": 3,
-    "question": "Besides the Web, what else does the internet encompass?",
+    "question": "Besides the Web, what else does the internet include?",
     "options": [
       "Only websites",
       "Email, online gaming, and VoIP, among others",
@@ -392,24 +523,10 @@
   },
   {
     "paperId": 3,
-    "question": "In the expression 'a + b * c', which operation is performed first?",
-    "options": ["a + b", "b * c", "a * c", "They happen at the same time"],
-    "answer": "b * c",
-    "explanation": "An expression can include multiple operators, like a + b * c, which first multiplies b and c and then adds the result to a."
-  },
-  {
-    "paperId": 3,
-    "question": "If x = 5 and y = 10, what does the expression 'x < y' evaluate to?",
+    "question": "What does the expression '5 < 10' evaluate to?",
     "options": ["true", "false", "5", "10"],
     "answer": "true",
     "explanation": "The less than operator (<) returns a Boolean value. Since 5 is less than 10, the expression x < y evaluates to true."
-  },
-  {
-    "paperId": 3,
-    "question": "Given the expression 'a + b * c' where a=2, b=3, and c=4, what is the result?",
-    "options": ["9", "14", "20", "24"],
-    "answer": "14",
-    "explanation": "Following operator precedence, b * c is calculated first (3 * 4 = 12), then a is added (2 + 12 = 14)."
   },
   {
     "paperId": 3,
@@ -434,217 +551,5 @@
     ],
     "answer": "Because the Web is just one of many applications that run on the internet's infrastructure",
     "explanation": "The Web is not the Internet; it is one of many applications created on it, running on the internet's global physical infrastructure."
-  },
-  {
-    "paperId": 3,
-    "question": "Which logical operator returns true if at least one of the operands is true?",
-    "options": ["AND", "OR", "NOT", "Equality"],
-    "answer": "OR",
-    "explanation": "Unlike AND, which requires both operands to be true, the OR logical operator returns true if at least one of the operands is true."
-  },
-  {
-    "paperId": 2,
-    "question": "According to the Internet vs Web comparison, what is the World Wide Web (WWW)?",
-    "options": [
-      "The global physical infrastructure of computers and networks",
-      "A software service that runs on the internet's infrastructure to access information using HTTP",
-      "A single website",
-      "A type of computer virus"
-    ],
-    "answer": "A software service that runs on the internet's infrastructure to access information using HTTP",
-    "explanation": "The World Wide Web (WWW) is a software service running on the internet's infrastructure to access information using HTTP."
-  },
-  {
-    "paperId": 2,
-    "question": "Which protocol does the internet (not the web) use to transmit data?",
-    "options": ["HTTP", "HTTPS", "TCP/IP", "FTP"],
-    "answer": "TCP/IP",
-    "explanation": "The internet uses TCP (Transmission Control Protocol) or IP (Internet Protocol) to transmit data."
-  },
-  {
-    "paperId": 2,
-    "question": "Who invented the World Wide Web?",
-    "options": [
-      "Bill Gates",
-      "Tim Berners-Lee",
-      "Steve Jobs",
-      "Mark Zuckerberg"
-    ],
-    "answer": "Tim Berners-Lee",
-    "explanation": "Sir Tim Berners-Lee invented the World Wide Web in 1989."
-  },
-  {
-    "paperId": 2,
-    "question": "In what year was the World Wide Web created?",
-    "options": ["1960", "1975", "1989", "2000"],
-    "answer": "1989",
-    "explanation": "The web was created in 1989, while the internet itself was founded in the 1960s."
-  },
-  {
-    "paperId": 2,
-    "question": "What does VoIP stand for?",
-    "options": [
-      "Video over Internet Protocol",
-      "Voice over Internet Protocol",
-      "Volume of Internet Protocol",
-      "Virtual Online Internet Protocol"
-    ],
-    "answer": "Voice over Internet Protocol",
-    "explanation": "VoIP stands for Voice over Internet Protocol, technology that enables real-time voice communication over the internet."
-  },
-  {
-    "paperId": 2,
-    "question": "Besides the World Wide Web, what else does the internet encompass?",
-    "options": [
-      "Only web pages",
-      "Email, online gaming, and VoIP, among others",
-      "Only search engines",
-      "Only text messages"
-    ],
-    "answer": "Email, online gaming, and VoIP, among others",
-    "explanation": "The internet encompasses email, online gaming, VoIP, and other services beyond just the Web."
-  },
-  {
-    "paperId": 2,
-    "question": "In the code '<div class=\"container\">', what does the class attribute do?",
-    "options": [
-      "It creates a new HTML tag",
-      "It links the element to a CSS class so it can be styled",
-      "It deletes the element",
-      "It runs JavaScript code"
-    ],
-    "answer": "It links the element to a CSS class so it can be styled",
-    "explanation": "The class attribute assigns a name to an HTML element so that CSS rules (like '.container { ... }') can target and style it."
-  },
-  {
-    "paperId": 2,
-    "question": "In CSS, what does a dot (.) before a name, like '.container', represent?",
-    "options": [
-      "An ID selector",
-      "A class selector",
-      "An element selector",
-      "A comment"
-    ],
-    "answer": "A class selector",
-    "explanation": "A dot (.) prefix in CSS denotes a class selector, which targets all elements with that class attribute."
-  },
-  {
-    "paperId": 2,
-    "question": "Which CSS property is used to round the corners of an element, as in 'border-radius: 18px;'?",
-    "options": ["border-color", "border-radius", "border-style", "padding"],
-    "answer": "border-radius",
-    "explanation": "The border-radius property rounds the corners of an element's border box."
-  },
-  {
-    "paperId": 2,
-    "question": "Which CSS property controls the size of text, as in 'font-size: 40px;'?",
-    "options": ["font-weight", "font-family", "font-size", "text-align"],
-    "answer": "font-size",
-    "explanation": "The font-size property controls how large or small text appears."
-  },
-  {
-    "paperId": 2,
-    "question": "Which CSS property aligns text, as in 'text-align: center;'?",
-    "options": ["text-align", "vertical-align", "align-items", "float"],
-    "answer": "text-align",
-    "explanation": "The text-align property is used to horizontally align text within an element, such as centering it."
-  },
-  {
-    "paperId": 2,
-    "question": "Which CSS property controls how bold text appears, as in 'font-weight: 500;'?",
-    "options": ["font-style", "font-weight", "font-size", "text-decoration"],
-    "answer": "font-weight",
-    "explanation": "The font-weight property controls the thickness/boldness of text."
-  },
-  {
-    "paperId": 2,
-    "question": "In 'color: #193cb9;', what does the color property control?",
-    "options": [
-      "The background color",
-      "The border color",
-      "The text color",
-      "The page's overall theme"
-    ],
-    "answer": "The text color",
-    "explanation": "The color property sets the color of an element's text."
-  },
-  {
-    "paperId": 2,
-    "question": "Which HTML tag was used to create the grouping container that holds the page content, e.g. '<div class=\"container\">'?",
-    "options": ["<span>", "<div>", "<section>", "<p>"],
-    "answer": "<div>",
-    "explanation": "The <div> tag is a generic container element used to group and structure content, as seen in '<div class=\"container\">'."
-  },
-  {
-    "paperId": 2,
-    "question": "Why is the internet often compared to 'a highway' while the web is compared to 'a vehicle' on that highway?",
-    "options": [
-      "Because the internet moves faster than the web",
-      "Because the internet is the underlying infrastructure, while the web is one of many services that run on it",
-      "Because the web replaced the internet",
-      "Because they are the exact same thing"
-    ],
-    "answer": "Because the internet is the underlying infrastructure, while the web is one of many services that run on it",
-    "explanation": "The internet is the foundation (like a highway), while the web is a service on that foundation (like a vehicle running on the highway)."
-  },
-  {
-    "paperId": 2,
-    "question": "In the CSS rule 'margin: 50px auto;' applied to .container, what does the value 'auto' achieve?",
-    "options": [
-      "It removes all margin",
-      "It centers the element horizontally within its parent",
-      "It adds a random margin",
-      "It sets the margin to zero"
-    ],
-    "answer": "It centers the element horizontally within its parent",
-    "explanation": "Using 'auto' for the left/right margin (as in 'margin: 50px auto;') centers a block element horizontally within its containing element."
-  },
-  {
-    "paperId": 2,
-    "question": "The sample code uses <h1>, <h2>, and <h3> tags in a single page for different pieces of text. What does this demonstrate about HTML headings?",
-    "options": [
-      "Headings must always appear in strict numerical order with no skipping",
-      "Heading tags can be used in any order chosen by the developer, though they represent different levels of importance",
-      "Only one heading tag can be used per page",
-      "Heading tags control the background color"
-    ],
-    "answer": "Heading tags can be used in any order chosen by the developer, though they represent different levels of importance",
-    "explanation": "While h1-h6 represent a hierarchy of importance (h1 highest), a developer can choose which levels to use where based on design needs, as seen in the sample code."
-  },
-  {
-    "paperId": 2,
-    "question": "Given the CSS '.members { background-color: #dbeaff; border-radius: 8px; padding: 15px; }', what visual effect would removing the padding declaration have?",
-    "options": [
-      "The background color would disappear",
-      "The content inside would sit directly against the edges of the box instead of having internal spacing",
-      "The border-radius would stop working",
-      "The element would become invisible"
-    ],
-    "answer": "The content inside would sit directly against the edges of the box instead of having internal spacing",
-    "explanation": "Padding creates space between an element's content and its border; removing it would make the content touch the box's edges directly."
-  },
-  {
-    "paperId": 2,
-    "question": "Why does the Web Dev material describe the Web as 'not the Internet'?",
-    "options": [
-      "Because they use the same protocol",
-      "Because the Web is just one of many applications that run using the internet's infrastructure",
-      "Because the Web was invented before the internet",
-      "Because the internet only carries images"
-    ],
-    "answer": "Because the Web is just one of many applications that run using the internet's infrastructure",
-    "explanation": "The Web is not the Internet; it is one of many applications (along with email, gaming, VoIP, etc.) created on the internet's infrastructure."
-  },
-  {
-    "paperId": 2,
-    "question": "In the code, both .member and .container have 'background-color: white;', yet their shared parent .members has 'background-color: #dbeaff;'. What does this demonstrate about nested elements in CSS?",
-    "options": [
-      "Child elements cannot have their own background color",
-      "A child element's background color can be styled independently of, and can visually sit on top of, its parent's background color",
-      "The last background-color rule declared in the file always wins regardless of selector",
-      "Background colors are inherited automatically unless removed"
-    ],
-    "answer": "A child element's background color can be styled independently of, and can visually sit on top of, its parent's background color",
-    "explanation": "Each element's background-color is set by its own CSS rule; a child element (like .member) can have a different background color than its parent (.members), creating a layered card effect."
   }
 ]
